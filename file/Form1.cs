@@ -21,8 +21,19 @@ namespace file
         public Form1()
         {
             InitializeComponent();
+            this.BackColor = Color.White;
+            //panel1.BackColor = Color.FromArgb(25, Color.Black);
+            //panel2.BackColor = Color.FromArgb(25, Color.Black);
+            //panel3.BackColor = Color.FromArgb(25, Color.Black);
+            //panel4.BackColor = Color.FromArgb(25, Color.Black);
+            //panel5.BackColor = Color.FromArgb(25, Color.Black);
+            //panel6.BackColor = Color.FromArgb(25, Color.Black);
+            //panel7.BackColor = Color.FromArgb(25, Color.Black);
+            //panel8.BackColor = Color.FromArgb(25, Color.Black);
+            //panel9.BackColor = Color.FromArgb(25, Color.Black);
+
         }
-        
+
         // Aggregate functions
         private void sum_Click(object sender, EventArgs e)
         {
