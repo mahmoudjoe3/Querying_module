@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<table p1:name="" xmlns:p1="student">
+  <student>
+    <id>123</id>
+    <name>lol</name>
+    <gender>Male</gender>
+    <department>General</department>
+    <projects>
+      <project1>mario</project1>
+      <project2>XO</project2>
+    </projects>
+  </student>
+  <student>
+    <id>fef</id>
+    <name>ded</name>
+    <gender>Male</gender>
+    <department>Bioinformatic</department>
+    <project>
+      <project1>mario</project1>
+      <project2>connect 4</project2>
+      <project3>chess</project3>
+    </project>
+  </student>
+  <student>
+    <id>1</id>
+    <name>m</name>
+    <gender>Male</gender>
+    <department>AI</department>
+    <project>
+      <project1>mario</project1>
+      <project2>XO</project2>
+      <project3>connect 4</project3>
+    </project>
+  </student>
+  <student>
+    <id>3</id>
+    <name>mahmoud</name>
+    <gender>Male</gender>
+    <department>IT</department>
+    <project>
+      <project1>mario</project1>
+      <project2>XO</project2>
+      <project3>connect 4</project3>
+    </project>
+  </student>
+</table>
