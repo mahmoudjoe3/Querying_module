@@ -317,12 +317,22 @@ namespace file
                 {
                     load_noded_xml();
                    // Update.Text = "ADD NEW STUDENT";
+                    comboBox3.Items.Add("Aggregate functions");
+                    comboBox3.Items.Add("Comparison queries");
+                    comboBox3.Items.Add("Boolean opperators");
+                    comboBox3.Items.Add("Search");
                 }
                 else
                 {
 
                     DS.ReadXml(filePath);
                     table.DataSource = DS.Tables[0];
+
+                    comboBox3.Items.Add("Aggregate functions");
+                    comboBox3.Items.Add("Comparison queries");
+                    comboBox3.Items.Add("Boolean opperators");
+                    
+
                 }
             }
             bunifuTransition1.ShowSync(panel3);
@@ -526,6 +536,7 @@ namespace file
             
                 if (comboBox3.Text == "Aggregate functions")
                 {
+                    bunifuTransition1.HideSync(studentpanal);
                     bunifuTransition1.HideSync(Comparison);
                     bunifuTransition2.HideSync(Boolean);
 
@@ -537,6 +548,7 @@ namespace file
                 }
                 else if (comboBox3.Text == "Comparison queries")
                 {
+                    bunifuTransition1.HideSync(studentpanal);
                     bunifuTransition1.HideSync(Aggregate);
                     bunifuTransition2.HideSync(Boolean);
 
@@ -552,11 +564,21 @@ namespace file
                 {
                     bunifuTransition1.HideSync(Comparison);
                     bunifuTransition1.HideSync(Aggregate);
+                    bunifuTransition1.HideSync(studentpanal);
 
                     bunifuTransition2.ShowSync(Boolean);
                     bunifuTransition2.ShowSync(and);
                     bunifuTransition2.ShowSync(or);
                 }
+            else
+                {
+                    bunifuTransition1.HideSync(Comparison);
+                    bunifuTransition1.HideSync(Aggregate);
+                    bunifuTransition1.HideSync(Boolean);
+
+                    bunifuTransition2.ShowSync(studentpanal);
+                }
+
         }
 
       

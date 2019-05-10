@@ -93,21 +93,21 @@
             this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bunifuTransition2.SetDecoration(this.table, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.table, BunifuAnimatorNS.DecorationType.None);
-            this.table.Location = new System.Drawing.Point(41, 58);
-            this.table.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.table.Location = new System.Drawing.Point(31, 47);
+            this.table.Margin = new System.Windows.Forms.Padding(2);
             this.table.Name = "table";
             this.table.RowTemplate.Height = 24;
-            this.table.Size = new System.Drawing.Size(920, 449);
+            this.table.Size = new System.Drawing.Size(690, 365);
             this.table.TabIndex = 0;
             // 
             // filepathTX
             // 
             this.bunifuTransition1.SetDecoration(this.filepathTX, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.filepathTX, BunifuAnimatorNS.DecorationType.None);
-            this.filepathTX.Location = new System.Drawing.Point(267, 20);
-            this.filepathTX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.filepathTX.Location = new System.Drawing.Point(200, 16);
+            this.filepathTX.Margin = new System.Windows.Forms.Padding(2);
             this.filepathTX.Name = "filepathTX";
-            this.filepathTX.Size = new System.Drawing.Size(488, 22);
+            this.filepathTX.Size = new System.Drawing.Size(367, 20);
             this.filepathTX.TabIndex = 2;
             // 
             // openFile
@@ -126,10 +126,10 @@
             ">",
             "<",
             "in"});
-            this.comboBox1.Location = new System.Drawing.Point(252, 755);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox1.Location = new System.Drawing.Point(189, 613);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(22, 24);
+            this.comboBox1.Size = new System.Drawing.Size(18, 21);
             this.comboBox1.TabIndex = 4;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -141,9 +141,8 @@
             this.bunifuTransition1.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1440, 36);
+            this.panel1.Size = new System.Drawing.Size(1080, 29);
             this.panel1.TabIndex = 7;
             // 
             // button1
@@ -157,10 +156,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1393, -5);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(1045, -4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(47, 41);
+            this.button1.Size = new System.Drawing.Size(35, 33);
             this.button1.TabIndex = 0;
             this.button1.Text = "x";
             this.button1.UseVisualStyleBackColor = true;
@@ -175,10 +173,9 @@
             this.panel2.Controls.Add(this.choice_fileB);
             this.bunifuTransition2.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
-            this.panel2.Location = new System.Drawing.Point(0, 36);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(0, 29);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(226, 850);
+            this.panel2.Size = new System.Drawing.Size(170, 691);
             this.panel2.TabIndex = 8;
             // 
             // panel7
@@ -188,8 +185,9 @@
             this.bunifuTransition1.SetDecoration(this.panel7, BunifuAnimatorNS.DecorationType.None);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(13, 850);
+            this.panel7.Size = new System.Drawing.Size(10, 691);
             this.panel7.TabIndex = 15;
             // 
             // button3
@@ -204,10 +202,9 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(15, 570);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Location = new System.Drawing.Point(11, 463);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(211, 267);
+            this.button3.Size = new System.Drawing.Size(158, 217);
             this.button3.TabIndex = 3;
             this.button3.Text = "Make Any Query";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -226,10 +223,9 @@
             this.Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Update.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
             this.Update.Image = ((System.Drawing.Image)(resources.GetObject("Update.Image")));
-            this.Update.Location = new System.Drawing.Point(15, 295);
-            this.Update.Margin = new System.Windows.Forms.Padding(4);
+            this.Update.Location = new System.Drawing.Point(11, 240);
             this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(211, 276);
+            this.Update.Size = new System.Drawing.Size(158, 224);
             this.Update.TabIndex = 2;
             this.Update.Text = "Update Your Changes";
             this.Update.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -248,11 +244,11 @@
             this.choice_fileB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(199)))), ((int)(((byte)(228)))));
             this.choice_fileB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.choice_fileB.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.choice_fileB.Image = ((System.Drawing.Image)(resources.GetObject("choice_fileB.Image")));
-            this.choice_fileB.Location = new System.Drawing.Point(15, 18);
-            this.choice_fileB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.choice_fileB.Image = global::file.Properties.Resources.upload__3_;
+            this.choice_fileB.Location = new System.Drawing.Point(11, 12);
+            this.choice_fileB.Margin = new System.Windows.Forms.Padding(2);
             this.choice_fileB.Name = "choice_fileB";
-            this.choice_fileB.Size = new System.Drawing.Size(211, 280);
+            this.choice_fileB.Size = new System.Drawing.Size(158, 228);
             this.choice_fileB.TabIndex = 1;
             this.choice_fileB.Text = "Upload Your XML File";
             this.choice_fileB.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -267,10 +263,9 @@
             this.panel3.Controls.Add(this.table);
             this.bunifuTransition2.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.panel3, BunifuAnimatorNS.DecorationType.None);
-            this.panel3.Location = new System.Drawing.Point(248, 244);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(186, 198);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(980, 516);
+            this.panel3.Size = new System.Drawing.Size(735, 419);
             this.panel3.TabIndex = 9;
             this.panel3.Visible = false;
             // 
@@ -283,10 +278,9 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
-            this.label2.Location = new System.Drawing.Point(35, 12);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(26, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(194, 35);
+            this.label2.Size = new System.Drawing.Size(155, 28);
             this.label2.TabIndex = 3;
             this.label2.Text = "Your File Path is :";
             // 
@@ -299,9 +293,10 @@
             this.studentpanal.Controls.Add(this.label5);
             this.bunifuTransition2.SetDecoration(this.studentpanal, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.studentpanal, BunifuAnimatorNS.DecorationType.None);
-            this.studentpanal.Location = new System.Drawing.Point(443, 767);
+            this.studentpanal.Location = new System.Drawing.Point(479, 625);
+            this.studentpanal.Margin = new System.Windows.Forms.Padding(2);
             this.studentpanal.Name = "studentpanal";
-            this.studentpanal.Size = new System.Drawing.Size(603, 100);
+            this.studentpanal.Size = new System.Drawing.Size(474, 81);
             this.studentpanal.TabIndex = 13;
             this.studentpanal.Visible = false;
             // 
@@ -314,9 +309,10 @@
             this.search_B.FlatAppearance.BorderSize = 0;
             this.search_B.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.search_B.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold);
-            this.search_B.Location = new System.Drawing.Point(522, 36);
+            this.search_B.Location = new System.Drawing.Point(392, 29);
+            this.search_B.Margin = new System.Windows.Forms.Padding(2);
             this.search_B.Name = "search_B";
-            this.search_B.Size = new System.Drawing.Size(71, 32);
+            this.search_B.Size = new System.Drawing.Size(67, 26);
             this.search_B.TabIndex = 8;
             this.search_B.Text = "Search";
             this.search_B.UseVisualStyleBackColor = false;
@@ -329,9 +325,10 @@
             this.bunifuTransition2.SetDecoration(this.search_TX, BunifuAnimatorNS.DecorationType.None);
             this.search_TX.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold);
             this.search_TX.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.search_TX.Location = new System.Drawing.Point(326, 36);
+            this.search_TX.Location = new System.Drawing.Point(242, 29);
+            this.search_TX.Margin = new System.Windows.Forms.Padding(2);
             this.search_TX.Name = "search_TX";
-            this.search_TX.Size = new System.Drawing.Size(197, 32);
+            this.search_TX.Size = new System.Drawing.Size(148, 27);
             this.search_TX.TabIndex = 7;
             this.search_TX.Text = " search";
             this.search_TX.Click += new System.EventHandler(this.search_TX_Click);
@@ -348,9 +345,10 @@
             "gender",
             "id",
             "name"});
-            this.kindOfSearch_CB.Location = new System.Drawing.Point(141, 36);
+            this.kindOfSearch_CB.Location = new System.Drawing.Point(106, 29);
+            this.kindOfSearch_CB.Margin = new System.Windows.Forms.Padding(2);
             this.kindOfSearch_CB.Name = "kindOfSearch_CB";
-            this.kindOfSearch_CB.Size = new System.Drawing.Size(161, 32);
+            this.kindOfSearch_CB.Size = new System.Drawing.Size(122, 27);
             this.kindOfSearch_CB.Sorted = true;
             this.kindOfSearch_CB.TabIndex = 6;
             this.kindOfSearch_CB.Text = "name";
@@ -365,9 +363,10 @@
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
-            this.label5.Location = new System.Drawing.Point(4, 32);
+            this.label5.Location = new System.Drawing.Point(3, 26);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 35);
+            this.label5.Size = new System.Drawing.Size(103, 28);
             this.label5.TabIndex = 5;
             this.label5.Text = "Search By :";
             // 
@@ -402,10 +401,9 @@
             this.Aggregate.Controls.Add(this.sum);
             this.bunifuTransition2.SetDecoration(this.Aggregate, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.Aggregate, BunifuAnimatorNS.DecorationType.None);
-            this.Aggregate.Location = new System.Drawing.Point(252, 117);
-            this.Aggregate.Margin = new System.Windows.Forms.Padding(4);
+            this.Aggregate.Location = new System.Drawing.Point(189, 95);
             this.Aggregate.Name = "Aggregate";
-            this.Aggregate.Size = new System.Drawing.Size(976, 127);
+            this.Aggregate.Size = new System.Drawing.Size(732, 103);
             this.Aggregate.TabIndex = 2;
             this.Aggregate.Visible = false;
             // 
@@ -421,10 +419,9 @@
             this.max.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.max.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
             this.max.Image = ((System.Drawing.Image)(resources.GetObject("max.Image")));
-            this.max.Location = new System.Drawing.Point(626, 20);
-            this.max.Margin = new System.Windows.Forms.Padding(4);
+            this.max.Location = new System.Drawing.Point(470, 16);
             this.max.Name = "max";
-            this.max.Size = new System.Drawing.Size(112, 95);
+            this.max.Size = new System.Drawing.Size(84, 77);
             this.max.TabIndex = 3;
             this.max.Text = "MAX";
             this.max.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -444,10 +441,9 @@
             this.avg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.avg.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
             this.avg.Image = ((System.Drawing.Image)(resources.GetObject("avg.Image")));
-            this.avg.Location = new System.Drawing.Point(386, 20);
-            this.avg.Margin = new System.Windows.Forms.Padding(4);
+            this.avg.Location = new System.Drawing.Point(290, 16);
             this.avg.Name = "avg";
-            this.avg.Size = new System.Drawing.Size(112, 95);
+            this.avg.Size = new System.Drawing.Size(84, 77);
             this.avg.TabIndex = 2;
             this.avg.Text = "AVG";
             this.avg.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -467,10 +463,9 @@
             this.min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.min.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
             this.min.Image = ((System.Drawing.Image)(resources.GetObject("min.Image")));
-            this.min.Location = new System.Drawing.Point(506, 20);
-            this.min.Margin = new System.Windows.Forms.Padding(4);
+            this.min.Location = new System.Drawing.Point(380, 16);
             this.min.Name = "min";
-            this.min.Size = new System.Drawing.Size(112, 95);
+            this.min.Size = new System.Drawing.Size(84, 77);
             this.min.TabIndex = 1;
             this.min.Text = "MIN";
             this.min.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -490,10 +485,9 @@
             this.sum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sum.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
             this.sum.Image = ((System.Drawing.Image)(resources.GetObject("sum.Image")));
-            this.sum.Location = new System.Drawing.Point(266, 20);
-            this.sum.Margin = new System.Windows.Forms.Padding(4);
+            this.sum.Location = new System.Drawing.Point(200, 16);
             this.sum.Name = "sum";
-            this.sum.Size = new System.Drawing.Size(112, 95);
+            this.sum.Size = new System.Drawing.Size(84, 77);
             this.sum.TabIndex = 0;
             this.sum.Text = "SUM";
             this.sum.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -513,10 +507,9 @@
             this.Comparison.Controls.Add(this.great);
             this.bunifuTransition2.SetDecoration(this.Comparison, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.Comparison, BunifuAnimatorNS.DecorationType.None);
-            this.Comparison.Location = new System.Drawing.Point(1237, 137);
-            this.Comparison.Margin = new System.Windows.Forms.Padding(4);
+            this.Comparison.Location = new System.Drawing.Point(928, 111);
             this.Comparison.Name = "Comparison";
-            this.Comparison.Size = new System.Drawing.Size(200, 750);
+            this.Comparison.Size = new System.Drawing.Size(150, 609);
             this.Comparison.TabIndex = 4;
             this.Comparison.Visible = false;
             // 
@@ -528,10 +521,9 @@
             this.bunifuTransition2.SetDecoration(this.label4, BunifuAnimatorNS.DecorationType.None);
             this.label4.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
-            this.label4.Location = new System.Drawing.Point(11, 16);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(8, 13);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 26);
+            this.label4.Size = new System.Drawing.Size(97, 21);
             this.label4.TabIndex = 4;
             this.label4.Text = "Add Number :";
             // 
@@ -541,11 +533,10 @@
             this.bunifuTransition2.SetDecoration(this.cfield_tx, BunifuAnimatorNS.DecorationType.None);
             this.cfield_tx.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
             this.cfield_tx.ForeColor = System.Drawing.Color.Gray;
-            this.cfield_tx.Location = new System.Drawing.Point(13, 61);
-            this.cfield_tx.Margin = new System.Windows.Forms.Padding(4);
+            this.cfield_tx.Location = new System.Drawing.Point(10, 50);
             this.cfield_tx.Multiline = true;
             this.cfield_tx.Name = "cfield_tx";
-            this.cfield_tx.Size = new System.Drawing.Size(179, 32);
+            this.cfield_tx.Size = new System.Drawing.Size(135, 27);
             this.cfield_tx.TabIndex = 3;
             this.cfield_tx.Text = "Comparison Field";
             this.cfield_tx.Visible = false;
@@ -563,10 +554,9 @@
             this.in_range.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.in_range.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
             this.in_range.Image = ((System.Drawing.Image)(resources.GetObject("in_range.Image")));
-            this.in_range.Location = new System.Drawing.Point(39, 533);
-            this.in_range.Margin = new System.Windows.Forms.Padding(4);
+            this.in_range.Location = new System.Drawing.Point(29, 433);
             this.in_range.Name = "in_range";
-            this.in_range.Size = new System.Drawing.Size(112, 95);
+            this.in_range.Size = new System.Drawing.Size(84, 77);
             this.in_range.TabIndex = 3;
             this.in_range.Text = "IN";
             this.in_range.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -585,10 +575,9 @@
             this.equal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.equal.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
             this.equal.Image = ((System.Drawing.Image)(resources.GetObject("equal.Image")));
-            this.equal.Location = new System.Drawing.Point(39, 124);
-            this.equal.Margin = new System.Windows.Forms.Padding(4);
+            this.equal.Location = new System.Drawing.Point(29, 101);
             this.equal.Name = "equal";
-            this.equal.Size = new System.Drawing.Size(112, 95);
+            this.equal.Size = new System.Drawing.Size(84, 77);
             this.equal.TabIndex = 5;
             this.equal.Text = "Equal";
             this.equal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -608,10 +597,9 @@
             this.not_equal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.not_equal.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
             this.not_equal.Image = ((System.Drawing.Image)(resources.GetObject("not_equal.Image")));
-            this.not_equal.Location = new System.Drawing.Point(39, 228);
-            this.not_equal.Margin = new System.Windows.Forms.Padding(4);
+            this.not_equal.Location = new System.Drawing.Point(29, 185);
             this.not_equal.Name = "not_equal";
-            this.not_equal.Size = new System.Drawing.Size(112, 95);
+            this.not_equal.Size = new System.Drawing.Size(84, 77);
             this.not_equal.TabIndex = 4;
             this.not_equal.Text = "Not Equal";
             this.not_equal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -631,10 +619,9 @@
             this.small.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.small.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
             this.small.Image = ((System.Drawing.Image)(resources.GetObject("small.Image")));
-            this.small.Location = new System.Drawing.Point(39, 428);
-            this.small.Margin = new System.Windows.Forms.Padding(4);
+            this.small.Location = new System.Drawing.Point(29, 348);
             this.small.Name = "small";
-            this.small.Size = new System.Drawing.Size(112, 95);
+            this.small.Size = new System.Drawing.Size(84, 77);
             this.small.TabIndex = 2;
             this.small.Text = "SmallThan";
             this.small.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -654,10 +641,9 @@
             this.great.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.great.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
             this.great.Image = ((System.Drawing.Image)(resources.GetObject("great.Image")));
-            this.great.Location = new System.Drawing.Point(39, 333);
-            this.great.Margin = new System.Windows.Forms.Padding(4);
+            this.great.Location = new System.Drawing.Point(29, 271);
             this.great.Name = "great";
-            this.great.Size = new System.Drawing.Size(112, 85);
+            this.great.Size = new System.Drawing.Size(84, 69);
             this.great.TabIndex = 1;
             this.great.Text = "GreatThan";
             this.great.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -673,10 +659,9 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
-            this.label3.Location = new System.Drawing.Point(4, 10);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(3, 8);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(170, 26);
+            this.label3.Size = new System.Drawing.Size(139, 21);
             this.label3.TabIndex = 0;
             this.label3.Text = "Choose Of Following :";
             // 
@@ -686,15 +671,9 @@
             this.bunifuTransition1.SetDecoration(this.comboBox3, BunifuAnimatorNS.DecorationType.None);
             this.comboBox3.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold);
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Aggregate functions",
-            "Comparison queries",
-            "Boolean opperators",
-            "Search"});
-            this.comboBox3.Location = new System.Drawing.Point(1, 42);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox3.Location = new System.Drawing.Point(1, 34);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(183, 32);
+            this.comboBox3.Size = new System.Drawing.Size(138, 27);
             this.comboBox3.TabIndex = 1;
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
@@ -705,10 +684,9 @@
             this.panel4.Controls.Add(this.label3);
             this.bunifuTransition2.SetDecoration(this.panel4, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.panel4, BunifuAnimatorNS.DecorationType.None);
-            this.panel4.Location = new System.Drawing.Point(1243, 50);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Location = new System.Drawing.Point(932, 41);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(184, 68);
+            this.panel4.Size = new System.Drawing.Size(138, 55);
             this.panel4.TabIndex = 10;
             this.panel4.Visible = false;
             // 
@@ -719,10 +697,9 @@
             this.Boolean.Controls.Add(this.and);
             this.bunifuTransition2.SetDecoration(this.Boolean, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.Boolean, BunifuAnimatorNS.DecorationType.None);
-            this.Boolean.Location = new System.Drawing.Point(621, 768);
-            this.Boolean.Margin = new System.Windows.Forms.Padding(4);
+            this.Boolean.Location = new System.Drawing.Point(291, 625);
             this.Boolean.Name = "Boolean";
-            this.Boolean.Size = new System.Drawing.Size(238, 99);
+            this.Boolean.Size = new System.Drawing.Size(178, 80);
             this.Boolean.TabIndex = 11;
             this.Boolean.Visible = false;
             // 
@@ -738,10 +715,9 @@
             this.or.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.or.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
             this.or.Image = ((System.Drawing.Image)(resources.GetObject("or.Image")));
-            this.or.Location = new System.Drawing.Point(124, 0);
-            this.or.Margin = new System.Windows.Forms.Padding(4);
+            this.or.Location = new System.Drawing.Point(93, 0);
             this.or.Name = "or";
-            this.or.Size = new System.Drawing.Size(112, 95);
+            this.or.Size = new System.Drawing.Size(84, 77);
             this.or.TabIndex = 2;
             this.or.Text = "OR";
             this.or.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -760,10 +736,9 @@
             this.and.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.and.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
             this.and.Image = ((System.Drawing.Image)(resources.GetObject("and.Image")));
-            this.and.Location = new System.Drawing.Point(4, 0);
-            this.and.Margin = new System.Windows.Forms.Padding(4);
+            this.and.Location = new System.Drawing.Point(3, 0);
             this.and.Name = "and";
-            this.and.Size = new System.Drawing.Size(112, 95);
+            this.and.Size = new System.Drawing.Size(84, 77);
             this.and.TabIndex = 1;
             this.and.Text = "AND";
             this.and.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -779,10 +754,9 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Segoe Print", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(188)))), ((int)(((byte)(227)))));
-            this.label1.Location = new System.Drawing.Point(497, 59);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(373, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(474, 54);
+            this.label1.Size = new System.Drawing.Size(380, 43);
             this.label1.TabIndex = 12;
             this.label1.Text = "Welcome To Querying Module";
             // 
@@ -792,9 +766,10 @@
             this.bunifuTransition2.SetDecoration(this.panel5, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.panel5, BunifuAnimatorNS.DecorationType.None);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(1427, 36);
+            this.panel5.Location = new System.Drawing.Point(1070, 29);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(13, 850);
+            this.panel5.Size = new System.Drawing.Size(10, 691);
             this.panel5.TabIndex = 14;
             // 
             // panel6
@@ -803,9 +778,10 @@
             this.bunifuTransition2.SetDecoration(this.panel6, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.panel6, BunifuAnimatorNS.DecorationType.None);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 873);
+            this.panel6.Location = new System.Drawing.Point(0, 709);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1427, 13);
+            this.panel6.Size = new System.Drawing.Size(1070, 11);
             this.panel6.TabIndex = 15;
             // 
             // panel8
@@ -814,9 +790,10 @@
             this.bunifuTransition2.SetDecoration(this.panel8, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.panel8, BunifuAnimatorNS.DecorationType.None);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 36);
+            this.panel8.Location = new System.Drawing.Point(0, 29);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1427, 13);
+            this.panel8.Size = new System.Drawing.Size(1070, 11);
             this.panel8.TabIndex = 16;
             // 
             // bunifuTransition2
@@ -842,11 +819,11 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1440, 886);
+            this.ClientSize = new System.Drawing.Size(1080, 720);
             this.Controls.Add(this.studentpanal);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel6);
@@ -863,7 +840,7 @@
             this.bunifuTransition1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
