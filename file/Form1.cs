@@ -752,7 +752,9 @@ namespace file
             search_TX.Text = "";
             search_TX.ForeColor = System.Drawing.SystemColors.ControlLight;
         }
+
         private void value_click(object sender, EventArgs e)
+
         {
             search_TX.Text = "";
             search_TX.ForeColor = System.Drawing.SystemColors.ControlLight;
