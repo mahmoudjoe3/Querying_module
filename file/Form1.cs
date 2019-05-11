@@ -574,6 +574,7 @@ namespace file
             search_TX.ForeColor = System.Drawing.SystemColors.ControlLight;
         }
 
+        // Shafik&Youssef
         private void equal_Click(object sender, EventArgs e)
         {
             try
