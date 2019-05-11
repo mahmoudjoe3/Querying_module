@@ -21,25 +21,8 @@ namespace file
         public Form1()
         {
             InitializeComponent();
-           
-
         }
 
-        public class student
-        {
-            public string id;
-            public string name;
-            public string gender;
-            public string department;
-            public List<string> projects;
-            public student(string i, string n, string g, string d, List<string> p)
-            {
-                id = i; name = n; gender = g; department = d; projects = p;
-            }
-
-        }
-        
-        
         // Aggregate functions
         private void sum_Click(object sender, EventArgs e)
         {
@@ -68,7 +51,6 @@ namespace file
                 MessageBox.Show(ex.Message, "Warinig", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
         private void avg_Click(object sender, EventArgs e)
         {
             try
@@ -97,7 +79,6 @@ namespace file
                 MessageBox.Show(ex.Message, "Warinig", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
         private void min_Click(object sender, EventArgs e)
         {
             try
@@ -126,7 +107,6 @@ namespace file
                 MessageBox.Show(ex.Message, "Warinig", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
         private void max_Click(object sender, EventArgs e)
         {
             try
@@ -159,8 +139,247 @@ namespace file
 
         }
 
+        //Comparison functions
+        private void equal_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int column = table.CurrentCell.ColumnIndex;
+                int num_of_row = table.RowCount;
+                num_of_row--;
+                removes.Clear();
+
+                for (int i = 0; i < num_of_row; i++)
+                {
+
+                    if (Convert.ToInt32(cfield_tx.Text) != Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                    {
+
+                        removes.Add(i);
+
+                    }
+
+
+                }
+                for (int i = 0; i < removes.Count; i++)
+                {
+                    table.Rows.RemoveAt(removes[i]);
+                    for (int j = 0; j < removes.Count; j++)
+                    {
+                        if (i == j) continue;
+                        else { removes[j]--; }
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warinig", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        private void not_equal_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int column = table.CurrentCell.ColumnIndex;
+                int num_of_row = table.RowCount;
+                num_of_row--;
+                removes.Clear();
+
+                for (int i = 0; i < num_of_row; i++)
+                {
+
+                    if (Convert.ToInt32(cfield_tx.Text) == Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                    {
+
+                        removes.Add(i);
+
+                    }
+
+                }
+                for (int i = 0; i < removes.Count; i++)
+                {
+                    table.Rows.RemoveAt(removes[i]);
+                    for (int j = 0; j < removes.Count; j++)
+                    {
+                        if (i == j) continue;
+                        else { removes[j]--; }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warinig", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        private void great_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int column = table.CurrentCell.ColumnIndex;
+                int num_of_row = table.RowCount;
+                num_of_row--;
+                removes.Clear();
+                for (int i = 0; i < num_of_row; i++)
+                {
+
+                    if (Convert.ToInt32(cfield_tx.Text) >= Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                    {
+
+                        removes.Add(i);
+
+                    }
+
+                }
+                for (int i = 0; i < removes.Count; i++)
+                {
+                    table.Rows.RemoveAt(removes[i]);
+                    for (int j = 0; j < removes.Count; j++)
+                    {
+                        if (i == j) continue;
+                        else { removes[j]--; }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warinig", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        private void small_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int column = table.CurrentCell.ColumnIndex;
+                int num_of_row = table.RowCount;
+                num_of_row--;
+                removes.Clear();
+                for (int i = 0; i < num_of_row; i++)
+                {
+
+                    if (Convert.ToInt32(cfield_tx.Text) <= Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                    {
+
+                        removes.Add(i);
+
+                    }
+
+                }
+                for (int i = 0; i < removes.Count; i++)
+                {
+                    table.Rows.RemoveAt(removes[i]);
+                    for (int j = 0; j < removes.Count; j++)
+                    {
+                        if (i == j) continue;
+                        else { removes[j]--; }
+                    }
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warinig", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        private void in_range_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int column = table.CurrentCell.ColumnIndex;
+                int num_of_row = table.RowCount;
+                num_of_row--;
+                removes.Clear();
+                string[] s = cfield_tx.Text.Split(' ');
+
+                int min, max;
+                min = Convert.ToInt32(s[0]);
+                max = Convert.ToInt32(s[1]);
+                for (int i = 0; i < num_of_row; i++)
+                {
+
+                    if (!(min <= Convert.ToInt32(table.Rows[i].Cells[column].Value) && max >= Convert.ToInt32(table.Rows[i].Cells[column].Value)))
+                    {
+
+                        removes.Add(i);
+
+                    }
+
+                }
+                for (int i = 0; i < removes.Count; i++)
+                {
+                    table.Rows.RemoveAt(removes[i]);
+                    for (int j = 0; j < removes.Count; j++)
+                    {
+                        if (i == j) continue;
+                        else { removes[j]--; }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warinig", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
 
         //function of noded xml
+        public class student
+        {
+            public string id;
+            public string name;
+            public string gender;
+            public string department;
+            public List<string> projects;
+            public student(string i, string n, string g, string d, List<string> p)
+            {
+                id = i; name = n; gender = g; department = d; projects = p;
+            }
+
+        }
+        private void load_noded_xml()
+        {
+
+            XmlDocument DOC = new XmlDocument();
+            DOC.Load(filePath);
+            XmlNodeList list = DOC.GetElementsByTagName("student");
+            for (int i = 0; i < list.Count; i++)
+            {
+                XmlNodeList childs = list[i].ChildNodes;
+
+                string id = childs[0].InnerText;
+                string name = childs[1].InnerText;
+                string gender = childs[2].InnerText;
+                string dep = childs[3].InnerText;
+
+                XmlNodeList projects = childs[4].ChildNodes;
+                string[] pro = new string[5];
+
+                for (int j = 0; j < projects.Count; j++)
+                {
+                    string p1 = projects[j].InnerText;
+                    pro[j] = p1;
+                }
+                if (table.ColumnCount == 0)
+                {
+                    string h_id = childs[0].Name;
+                    string h_name = childs[1].Name;
+                    string h_gender = childs[2].Name;
+                    string h_dep = childs[3].Name;
+                    table.Columns.Add("ID", h_id);
+                    table.Columns.Add("NAME", h_name);
+                    table.Columns.Add("GENDER", h_gender);
+                    table.Columns.Add("DEPARTMENT", h_dep);
+                    table.Columns.Add("PRO1", "project 1");
+                    table.Columns.Add("PRO2", "project 2");
+                    table.Columns.Add("PRO3", "project 3");
+                    table.Columns.Add("PRO4", "project 4");
+                    table.Columns.Add("PRO5", "project 5");
+                }
+
+                string[] row = { id, name, gender, dep, pro[0], pro[1], pro[2], pro[3], pro[4] };
+                table.Rows.Add(row);
+            }
+        }
         private void edit()
         {
             int rows = (table.RowCount)-1;
@@ -272,50 +491,6 @@ namespace file
                 MessageBox.Show("Edit is Done");
             
         }
-        private void load_noded_xml()
-        {
-
-            XmlDocument DOC = new XmlDocument();
-            DOC.Load(filePath);
-            XmlNodeList list = DOC.GetElementsByTagName("student");
-            for (int i = 0; i < list.Count; i++)
-            {
-                XmlNodeList childs = list[i].ChildNodes;
-
-                string id = childs[0].InnerText;
-                string name = childs[1].InnerText;
-                string gender = childs[2].InnerText;
-                string dep = childs[3].InnerText;
-
-                XmlNodeList projects = childs[4].ChildNodes;
-                string[] pro = new string[5];
-
-                for (int j = 0; j < projects.Count; j++)
-                {
-                    string p1 = projects[j].InnerText;
-                    pro[j] = p1;
-                }
-                if (table.ColumnCount == 0)
-                {
-                    string h_id = childs[0].Name;
-                    string h_name = childs[1].Name;
-                    string h_gender = childs[2].Name;
-                    string h_dep = childs[3].Name;
-                    table.Columns.Add("ID", h_id);
-                    table.Columns.Add("NAME", h_name);
-                    table.Columns.Add("GENDER", h_gender);
-                    table.Columns.Add("DEPARTMENT", h_dep);
-                    table.Columns.Add("PRO1", "project 1");
-                    table.Columns.Add("PRO2", "project 2");
-                    table.Columns.Add("PRO3", "project 3");
-                    table.Columns.Add("PRO4", "project 4");
-                    table.Columns.Add("PRO5", "project 5");
-                }
-
-                string[] row = { id, name, gender, dep, pro[0], pro[1], pro[2], pro[3], pro[4] };
-                table.Rows.Add(row);
-            }
-        }
         public void Search(string searchKEY)
         {
             string op = "not showed";
@@ -398,7 +573,12 @@ namespace file
 
         }
 
-
+        //for all xml file
+        private void loadXml()
+        {
+            DS.ReadXml(filePath);
+            table.DataSource = DS.Tables[0];
+        }
         private void choice_file_Click(object sender, EventArgs e)
         {
             //choice_fileB.Text = "RELOUD NEW FILE";
@@ -434,7 +614,7 @@ namespace file
                 if (filename == "students.xml")
                 {
                     load_noded_xml();
-                   // Update.Text = "ADD NEW STUDENT";
+                    comboBox3.Items.Clear();
                     comboBox3.Items.Add("Aggregate functions");
                     comboBox3.Items.Add("Comparison queries");
                     comboBox3.Items.Add("Boolean opperators");
@@ -442,10 +622,8 @@ namespace file
                 }
                 else
                 {
-
-                    DS.ReadXml(filePath);
-                    table.DataSource = DS.Tables[0];
-
+                    loadXml();
+                    comboBox3.Items.Clear();
                     comboBox3.Items.Add("Aggregate functions");
                     comboBox3.Items.Add("Comparison queries");
                     comboBox3.Items.Add("Boolean opperators");
@@ -455,168 +633,6 @@ namespace file
             }
             bunifuTransition1.ShowSync(panel3);
         }
-
-
-        //shafik
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int column = table.CurrentCell.ColumnIndex; 
-            int num_of_row = table.RowCount;
-            num_of_row-- ;
-            removes.Clear();
-            if (comboBox1.Text != "")
-            {
-                
-              
-               
-                if (comboBox1.Text == "=")
-                {
-                    for (int i = 0; i < num_of_row; i++)
-                    {
-
-                        if (Convert.ToInt32(cfield_tx.Text) != Convert.ToInt32(table.Rows[i].Cells[column].Value))
-                        {
-
-                            removes.Add(i);
-
-                        }
-                        
-                       
-                    }
-                    for (int i = 0; i < removes.Count; i++)
-                    {
-                        table.Rows.RemoveAt(removes[i]);
-                        for(int j=0;j<removes.Count;j++)
-                        {
-                            if (i == j) continue;
-                            else { removes[j]--; }
-                        }
-                    }
-                   
-
-                }
-                else if (comboBox1.Text == "<")
-                {
-
-                    for (int i = 0; i < num_of_row; i++)
-                    {
-
-                        if (Convert.ToInt32(cfield_tx.Text) <= Convert.ToInt32(table.Rows[i].Cells[column].Value))
-                        {
-
-                            removes.Add(i);
-
-                        }
-
-                    }
-                    for (int i = 0; i < removes.Count; i++)
-                    {
-                        table.Rows.RemoveAt(removes[i]);
-                        for (int j = 0; j < removes.Count; j++)
-                        {
-                            if (i == j) continue;
-                            else { removes[j]--; }
-                        }
-                    }
-
-
-                }
-                else if (comboBox1.Text == ">")
-                {
-                    for (int i = 0; i < num_of_row; i++)
-                    {
-
-                        if (Convert.ToInt32(cfield_tx.Text) >= Convert.ToInt32(table.Rows[i].Cells[column].Value))
-                        {
-
-                            removes.Add(i);
-
-                        }
-
-                    }
-                    for (int i = 0; i < removes.Count; i++)
-                    {
-                        table.Rows.RemoveAt(removes[i]);
-                        for (int j = 0; j < removes.Count; j++)
-                        {
-                            if (i == j) continue;
-                            else { removes[j]--; }
-                        }
-                    }
-
-                }
-
-                else if (comboBox1.Text == "!=")
-                {
-                    for (int i = 0; i < num_of_row; i++)
-                    {
-
-                        if (Convert.ToInt32(cfield_tx.Text) == Convert.ToInt32(table.Rows[i].Cells[column].Value))
-                        {
-
-                            removes.Add(i);
-
-                        }
-
-                    }
-                    for (int i = 0; i < removes.Count; i++)
-                    {
-                        table.Rows.RemoveAt(removes[i]);
-                        for (int j = 0; j < removes.Count; j++)
-                        {
-                            if (i == j) continue;
-                            else { removes[j]--; }
-                        }
-                    }
-
-                }
-                else if(comboBox1.Text == "in")
-                {
-                    
-
-                    string[] s = cfield_tx.Text.Split(' ');
-                  
-                  int min,max;
-                    min=Convert.ToInt32(s[0]);
-                    max=Convert.ToInt32(s[1]);
-                    for (int i = 0; i < num_of_row; i++)
-                    {
-                        
-                        if (!(min <= Convert.ToInt32(table.Rows[i].Cells[column].Value) && max >= Convert.ToInt32(table.Rows[i].Cells[column].Value)))
-                        {
-
-                            removes.Add(i);
-
-                        }
-
-                    }
-                    for (int i = 0; i < removes.Count; i++)
-                    {
-                        table.Rows.RemoveAt(removes[i]);
-                        for (int j = 0; j < removes.Count; j++)
-                        {
-                            if (i == j) continue;
-                            else { removes[j]--; }
-                        }
-                    }
-
-                    
-
-                }
-
-
-
-
-            }
-        }
-
-
-
-        private void button1_Click_3(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void Update_Click(object sender, EventArgs e)
         {
             if (filename == "students.xml")
@@ -643,8 +659,17 @@ namespace file
                 }
             }
         }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void reset_Click(object sender, EventArgs e)
+        {
+            table.Rows.Clear();
+            if (filename == "students.xml")
+            {
+                
+                load_noded_xml();
+            }
+            else loadXml();
+        }
+        private void view_query_Click(object sender, EventArgs e)
         {
             if (table.FirstDisplayedCell != null)
             {
@@ -654,6 +679,12 @@ namespace file
                 MessageBox.Show("No Table Was Found!!! Please Upload Any Table First", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
         }
+        private void button1_Click_3(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
         // GUI CODE
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -704,44 +735,57 @@ namespace file
                 }
 
         }
-
-      
         private void cfield_tx_Click(object sender, EventArgs e)
         {
             cfield_tx.Text = "";
             cfield_tx.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
 
         }
-
         private void kindOfSearch_CB_SelectedIndexChanged(object sender, EventArgs e)
         {
             search_TX.Text = "";
             table.Rows.Clear();
             load_noded_xml();
         }
-
         private void search_TX_Click(object sender, EventArgs e)
         {
             search_TX.Text = "";
             search_TX.ForeColor = System.Drawing.SystemColors.ControlLight;
         }
+        private void value_click(object sender, EventArgs e)
+        {
+            search_TX.Text = "";
+            search_TX.ForeColor = System.Drawing.SystemColors.ControlLight;
+        }
+        private void kind_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            search_TX.Text = "";
+            table.Rows.Clear();
+            load_noded_xml();
+        }
 
-        private void equal_Click(object sender, EventArgs e)
+
+
+
+
+
+
+
+
+
+       // اكتب هنا يا كشري اللى انت عاوزو
+
+        private void conferm_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void not_equal_Click(object sender, EventArgs e)
+        private void and_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void great_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void small_Click(object sender, EventArgs e)
+        private void or_Click(object sender, EventArgs e)
         {
 
         }

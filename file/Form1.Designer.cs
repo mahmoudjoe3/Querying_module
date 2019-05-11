@@ -35,13 +35,12 @@
             this.table = new System.Windows.Forms.DataGridView();
             this.filepathTX = new System.Windows.Forms.TextBox();
             this.openFile = new System.Windows.Forms.OpenFileDialog();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.reset = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.view_query = new System.Windows.Forms.Button();
             this.Update = new System.Windows.Forms.Button();
             this.choice_fileB = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -76,6 +75,9 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.bunifuTransition2 = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.value = new System.Windows.Forms.TextBox();
+            this.kind = new System.Windows.Forms.ComboBox();
+            this.conferm = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -116,24 +118,6 @@
             this.openFile.FileName = "open";
             this.openFile.Filter = "(*.xml)|*.xml";
             // 
-            // comboBox1
-            // 
-            this.bunifuTransition2.SetDecoration(this.comboBox1, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.comboBox1, BunifuAnimatorNS.DecorationType.None);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "=",
-            "!=",
-            ">",
-            "<",
-            "in"});
-            this.comboBox1.Location = new System.Drawing.Point(252, 754);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(23, 24);
-            this.comboBox1.TabIndex = 4;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -170,9 +154,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.reset);
             this.panel2.Controls.Add(this.panel7);
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.view_query);
             this.panel2.Controls.Add(this.Update);
             this.panel2.Controls.Add(this.choice_fileB);
             this.bunifuTransition2.SetDecoration(this.panel2, BunifuAnimatorNS.DecorationType.None);
@@ -183,26 +167,27 @@
             this.panel2.Size = new System.Drawing.Size(227, 850);
             this.panel2.TabIndex = 8;
             // 
-            // button2
+            // reset
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
-            this.bunifuTransition1.SetDecoration(this.button2, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.button2, BunifuAnimatorNS.DecorationType.None);
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(47)))), ((int)(((byte)(189)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(199)))), ((int)(((byte)(228)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
-            this.button2.Image = global::file.Properties.Resources.eraser;
-            this.button2.Location = new System.Drawing.Point(15, 400);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(211, 220);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Remove This";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = false;
+            this.reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
+            this.bunifuTransition1.SetDecoration(this.reset, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.reset, BunifuAnimatorNS.DecorationType.None);
+            this.reset.FlatAppearance.BorderSize = 0;
+            this.reset.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.reset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(47)))), ((int)(((byte)(189)))));
+            this.reset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(199)))), ((int)(((byte)(228)))));
+            this.reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reset.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
+            this.reset.Image = global::file.Properties.Resources.eraser;
+            this.reset.Location = new System.Drawing.Point(15, 400);
+            this.reset.Margin = new System.Windows.Forms.Padding(4);
+            this.reset.Name = "reset";
+            this.reset.Size = new System.Drawing.Size(211, 220);
+            this.reset.TabIndex = 16;
+            this.reset.Text = "Reset";
+            this.reset.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.reset.UseVisualStyleBackColor = false;
+            this.reset.Click += new System.EventHandler(this.reset_Click);
             // 
             // panel7
             // 
@@ -216,27 +201,27 @@
             this.panel7.Size = new System.Drawing.Size(13, 850);
             this.panel7.TabIndex = 15;
             // 
-            // button3
+            // view_query
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
-            this.bunifuTransition1.SetDecoration(this.button3, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.button3, BunifuAnimatorNS.DecorationType.None);
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(47)))), ((int)(((byte)(189)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(199)))), ((int)(((byte)(228)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
-            this.button3.Image = global::file.Properties.Resources.Webp_net_resizeimage;
-            this.button3.Location = new System.Drawing.Point(15, 620);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(211, 217);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Make Any Query";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.view_query.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
+            this.bunifuTransition1.SetDecoration(this.view_query, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.view_query, BunifuAnimatorNS.DecorationType.None);
+            this.view_query.FlatAppearance.BorderSize = 0;
+            this.view_query.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.view_query.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(47)))), ((int)(((byte)(189)))));
+            this.view_query.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(199)))), ((int)(((byte)(228)))));
+            this.view_query.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.view_query.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
+            this.view_query.Image = global::file.Properties.Resources.Webp_net_resizeimage;
+            this.view_query.Location = new System.Drawing.Point(15, 620);
+            this.view_query.Margin = new System.Windows.Forms.Padding(4);
+            this.view_query.Name = "view_query";
+            this.view_query.Size = new System.Drawing.Size(211, 217);
+            this.view_query.TabIndex = 3;
+            this.view_query.Text = "Make Any Query";
+            this.view_query.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.view_query.UseVisualStyleBackColor = false;
+            this.view_query.Click += new System.EventHandler(this.view_query_Click);
             // 
             // Update
             // 
@@ -323,10 +308,10 @@
             this.studentpanal.Controls.Add(this.label5);
             this.bunifuTransition2.SetDecoration(this.studentpanal, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.studentpanal, BunifuAnimatorNS.DecorationType.None);
-            this.studentpanal.Location = new System.Drawing.Point(639, 769);
+            this.studentpanal.Location = new System.Drawing.Point(672, 769);
             this.studentpanal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.studentpanal.Name = "studentpanal";
-            this.studentpanal.Size = new System.Drawing.Size(632, 100);
+            this.studentpanal.Size = new System.Drawing.Size(556, 100);
             this.studentpanal.TabIndex = 13;
             this.studentpanal.Visible = false;
             // 
@@ -603,6 +588,7 @@
             this.in_range.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.in_range.UseVisualStyleBackColor = false;
             this.in_range.Visible = false;
+            this.in_range.Click += new System.EventHandler(this.in_range_Click);
             // 
             // equal
             // 
@@ -741,14 +727,17 @@
             // Boolean
             // 
             this.Boolean.BackColor = System.Drawing.Color.Transparent;
+            this.Boolean.Controls.Add(this.conferm);
+            this.Boolean.Controls.Add(this.kind);
+            this.Boolean.Controls.Add(this.value);
             this.Boolean.Controls.Add(this.or);
             this.Boolean.Controls.Add(this.and);
             this.bunifuTransition2.SetDecoration(this.Boolean, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.Boolean, BunifuAnimatorNS.DecorationType.None);
-            this.Boolean.Location = new System.Drawing.Point(388, 769);
+            this.Boolean.Location = new System.Drawing.Point(248, 769);
             this.Boolean.Margin = new System.Windows.Forms.Padding(4);
             this.Boolean.Name = "Boolean";
-            this.Boolean.Size = new System.Drawing.Size(237, 98);
+            this.Boolean.Size = new System.Drawing.Size(417, 98);
             this.Boolean.TabIndex = 11;
             this.Boolean.Visible = false;
             // 
@@ -773,6 +762,7 @@
             this.or.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.or.UseVisualStyleBackColor = false;
             this.or.Visible = false;
+            this.or.Click += new System.EventHandler(this.or_Click);
             // 
             // and
             // 
@@ -795,6 +785,7 @@
             this.and.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.and.UseVisualStyleBackColor = false;
             this.and.Visible = false;
+            this.and.Click += new System.EventHandler(this.and_Click);
             // 
             // label1
             // 
@@ -869,6 +860,60 @@
             animation12.TransparencyCoeff = 0F;
             this.bunifuTransition2.DefaultAnimation = animation12;
             // 
+            // value
+            // 
+            this.value.BackColor = System.Drawing.Color.Black;
+            this.value.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuTransition1.SetDecoration(this.value, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.value, BunifuAnimatorNS.DecorationType.None);
+            this.value.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold);
+            this.value.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.value.Location = new System.Drawing.Point(258, 32);
+            this.value.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.value.Name = "value";
+            this.value.Size = new System.Drawing.Size(148, 32);
+            this.value.TabIndex = 8;
+            this.value.Text = " search";
+            this.value.Click += new System.EventHandler(this.value_click);
+            // 
+            // kind
+            // 
+            this.kind.BackColor = System.Drawing.Color.White;
+            this.bunifuTransition2.SetDecoration(this.kind, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.kind, BunifuAnimatorNS.DecorationType.None);
+            this.kind.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold);
+            this.kind.FormattingEnabled = true;
+            this.kind.Items.AddRange(new object[] {
+            "department",
+            "gender",
+            "id",
+            "name"});
+            this.kind.Location = new System.Drawing.Point(258, 2);
+            this.kind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kind.Name = "kind";
+            this.kind.Size = new System.Drawing.Size(148, 32);
+            this.kind.Sorted = true;
+            this.kind.TabIndex = 9;
+            this.kind.Text = "name";
+            this.kind.SelectedIndexChanged += new System.EventHandler(this.kind_SelectedIndexChanged);
+            // 
+            // conferm
+            // 
+            this.conferm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
+            this.bunifuTransition1.SetDecoration(this.conferm, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.conferm, BunifuAnimatorNS.DecorationType.None);
+            this.conferm.FlatAppearance.BorderSize = 0;
+            this.conferm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(199)))), ((int)(((byte)(228)))));
+            this.conferm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.conferm.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold);
+            this.conferm.Location = new System.Drawing.Point(258, 64);
+            this.conferm.Name = "conferm";
+            this.conferm.Size = new System.Drawing.Size(148, 35);
+            this.conferm.TabIndex = 10;
+            this.conferm.Text = "Confarm";
+            this.conferm.UseVisualStyleBackColor = false;
+            this.conferm.Click += new System.EventHandler(this.conferm_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -879,7 +924,6 @@
             this.Controls.Add(this.studentpanal);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Boolean);
@@ -909,6 +953,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.Boolean.ResumeLayout(false);
+            this.Boolean.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -920,7 +965,6 @@
         private System.Windows.Forms.Button choice_fileB;
         private System.Windows.Forms.TextBox filepathTX;
         private System.Windows.Forms.OpenFileDialog openFile;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
@@ -928,7 +972,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private BunifuAnimatorNS.BunifuTransition bunifuTransition1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button view_query;
         private System.Windows.Forms.Panel Aggregate;
         private System.Windows.Forms.Button max;
         private System.Windows.Forms.Button avg;
@@ -959,7 +1003,10 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button reset;
+        private System.Windows.Forms.Button conferm;
+        private System.Windows.Forms.ComboBox kind;
+        private System.Windows.Forms.TextBox value;
     }
 }
 
