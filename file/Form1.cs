@@ -619,6 +619,7 @@ namespace file
                     comboBox3.Items.Add("Comparison queries");
                     comboBox3.Items.Add("Boolean opperators");
                     comboBox3.Items.Add("Search");
+                    comboBox3.Items.Add("All");
                 }
                 else
                 {
@@ -627,7 +628,7 @@ namespace file
                     comboBox3.Items.Add("Aggregate functions");
                     comboBox3.Items.Add("Comparison queries");
                     comboBox3.Items.Add("Boolean opperators");
-                    
+                    comboBox3.Items.Add("All");
 
                 }
             }
@@ -686,53 +687,81 @@ namespace file
 
 
         // GUI CODE
+        private void showAll()
+        {
+            //Aggregate functions
+            bunifuTransition2.ShowSync(Aggregate);
+            bunifuTransition2.ShowSync(sum);
+            bunifuTransition2.ShowSync(avg);
+            bunifuTransition2.ShowSync(min);
+            bunifuTransition2.ShowSync(max);
+            //Comparison queries
+            bunifuTransition2.ShowSync(Comparison);
+            bunifuTransition2.ShowSync(cfield_tx);
+            bunifuTransition2.ShowSync(equal);
+            bunifuTransition2.ShowSync(not_equal);
+            bunifuTransition2.ShowSync(great);
+            bunifuTransition2.ShowSync(small);
+            bunifuTransition2.ShowSync(in_range);
+            //Boolean opperators
+            bunifuTransition2.ShowSync(Boolean);
+            bunifuTransition2.ShowSync(and);
+            bunifuTransition2.ShowSync(or);
+            //search
+            bunifuTransition2.ShowSync(studentpanal);
+        }
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-                if (comboBox3.Text == "Aggregate functions")
-                {
-                    bunifuTransition1.HideSync(studentpanal);
-                    bunifuTransition1.HideSync(Comparison);
-                    bunifuTransition2.HideSync(Boolean);
 
-                    bunifuTransition2.ShowSync(Aggregate);
-                    bunifuTransition2.ShowSync(sum);
-                    bunifuTransition2.ShowSync(avg);
-                    bunifuTransition2.ShowSync(min);
-                    bunifuTransition2.ShowSync(max);
-                }
-                else if (comboBox3.Text == "Comparison queries")
-                {
-                    bunifuTransition1.HideSync(studentpanal);
-                    bunifuTransition1.HideSync(Aggregate);
-                    bunifuTransition2.HideSync(Boolean);
+            if (comboBox3.Text == "Aggregate functions")
+            {
+                bunifuTransition1.HideSync(studentpanal);
+                bunifuTransition1.HideSync(Comparison);
+                bunifuTransition2.HideSync(Boolean);
 
-                    bunifuTransition2.ShowSync(Comparison);
-                    bunifuTransition2.ShowSync(cfield_tx);
-                    bunifuTransition2.ShowSync(equal);
-                    bunifuTransition2.ShowSync(not_equal);
-                    bunifuTransition2.ShowSync(great);
-                    bunifuTransition2.ShowSync(small);
-                    bunifuTransition2.ShowSync(in_range);
-                }
-                else if (comboBox3.Text == "Boolean opperators")
-                {
-                    bunifuTransition1.HideSync(Comparison);
-                    bunifuTransition1.HideSync(Aggregate);
-                    bunifuTransition1.HideSync(studentpanal);
+                bunifuTransition2.ShowSync(Aggregate);
+                bunifuTransition2.ShowSync(sum);
+                bunifuTransition2.ShowSync(avg);
+                bunifuTransition2.ShowSync(min);
+                bunifuTransition2.ShowSync(max);
+            }
+            else if (comboBox3.Text == "Comparison queries")
+            {
+                bunifuTransition1.HideSync(studentpanal);
+                bunifuTransition1.HideSync(Aggregate);
+                bunifuTransition2.HideSync(Boolean);
 
-                    bunifuTransition2.ShowSync(Boolean);
-                    bunifuTransition2.ShowSync(and);
-                    bunifuTransition2.ShowSync(or);
-                }
+                bunifuTransition2.ShowSync(Comparison);
+                bunifuTransition2.ShowSync(cfield_tx);
+                bunifuTransition2.ShowSync(equal);
+                bunifuTransition2.ShowSync(not_equal);
+                bunifuTransition2.ShowSync(great);
+                bunifuTransition2.ShowSync(small);
+                bunifuTransition2.ShowSync(in_range);
+            }
+            else if (comboBox3.Text == "Boolean opperators")
+            {
+                bunifuTransition1.HideSync(Comparison);
+                bunifuTransition1.HideSync(Aggregate);
+                bunifuTransition1.HideSync(studentpanal);
+
+                bunifuTransition2.ShowSync(Boolean);
+                bunifuTransition2.ShowSync(and);
+                bunifuTransition2.ShowSync(or);
+            }
+            else if (comboBox3.Text == "All")
+            {
+                showAll();
+            }
             else
-                {
-                    bunifuTransition1.HideSync(Comparison);
-                    bunifuTransition1.HideSync(Aggregate);
-                    bunifuTransition1.HideSync(Boolean);
+            {
+                bunifuTransition1.HideSync(Comparison);
+                bunifuTransition1.HideSync(Aggregate);
+                bunifuTransition1.HideSync(Boolean);
 
-                    bunifuTransition2.ShowSync(studentpanal);
-                }
+                bunifuTransition2.ShowSync(studentpanal);
+            }
+
 
         }
         private void cfield_tx_Click(object sender, EventArgs e)
@@ -743,7 +772,7 @@ namespace file
         }
         private void kindOfSearch_CB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            search_TX.Text = "";
+            search_TX.Text = "Search";
             table.Rows.Clear();
             load_noded_xml();
         }
@@ -755,12 +784,12 @@ namespace file
         private void value_click(object sender, EventArgs e)
 
         {
-            search_TX.Text = "";
-            search_TX.ForeColor = System.Drawing.SystemColors.ControlLight;
+            value.Text = "";
+            value.ForeColor = System.Drawing.SystemColors.ControlLight;
         }
         private void kind_SelectedIndexChanged(object sender, EventArgs e)
         {
-            search_TX.Text = "";
+            value.Text = "Condition";
             table.Rows.Clear();
             load_noded_xml();
         }
