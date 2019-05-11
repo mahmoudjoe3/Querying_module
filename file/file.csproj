@@ -96,9 +96,80 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\eraser.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\upload %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webp.net-resizeimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\symbol %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\average.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\min.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\max.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\min1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\balance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\judge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-point-to-right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-point-to-right %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-point-to-right %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-point-to-right %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\move-to-next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\move-to-next %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chevron-pointing-to-the-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chevron-pointing-to-the-left %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spacing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.clear_b = new System.Windows.Forms.Button();
             this.add_b = new System.Windows.Forms.Button();
             this.projects_clb = new System.Windows.Forms.CheckedListBox();
             this.department_cb = new System.Windows.Forms.ComboBox();
@@ -48,24 +47,12 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // clear_b
-            // 
-            this.clear_b.FlatAppearance.BorderSize = 0;
-            this.clear_b.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.clear_b.Location = new System.Drawing.Point(464, 303);
-            this.clear_b.Name = "clear_b";
-            this.clear_b.Size = new System.Drawing.Size(109, 32);
-            this.clear_b.TabIndex = 25;
-            this.clear_b.Text = "Clear";
-            this.clear_b.UseVisualStyleBackColor = true;
-            this.clear_b.Click += new System.EventHandler(this.clear_b_Click_1);
-            // 
             // add_b
             // 
             this.add_b.Cursor = System.Windows.Forms.Cursors.Hand;
             this.add_b.FlatAppearance.BorderSize = 0;
             this.add_b.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.add_b.Location = new System.Drawing.Point(464, 265);
+            this.add_b.Location = new System.Drawing.Point(464, 303);
             this.add_b.Name = "add_b";
             this.add_b.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.add_b.Size = new System.Drawing.Size(109, 32);
@@ -269,7 +256,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.close);
-            this.Controls.Add(this.clear_b);
             this.Controls.Add(this.add_b);
             this.Controls.Add(this.projects_clb);
             this.Controls.Add(this.department_cb);
@@ -292,8 +278,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button clear_b;
         private System.Windows.Forms.Button add_b;
         private System.Windows.Forms.CheckedListBox projects_clb;
         private System.Windows.Forms.ComboBox department_cb;

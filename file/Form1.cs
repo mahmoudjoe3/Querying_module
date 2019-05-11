@@ -21,19 +21,135 @@ namespace file
         public Form1()
         {
             InitializeComponent();
-            this.BackColor = Color.White;
-            //panel1.BackColor = Color.FromArgb(25, Color.Black);
-            //panel2.BackColor = Color.FromArgb(25, Color.Black);
-            //panel3.BackColor = Color.FromArgb(25, Color.Black);
-            //panel4.BackColor = Color.FromArgb(25, Color.Black);
-            //panel5.BackColor = Color.FromArgb(25, Color.Black);
-            //panel6.BackColor = Color.FromArgb(25, Color.Black);
-            //panel7.BackColor = Color.FromArgb(25, Color.Black);
-            //panel8.BackColor = Color.FromArgb(25, Color.Black);
-            //panel9.BackColor = Color.FromArgb(25, Color.Black);
+           
 
         }
 
+        public class student
+        {
+            public string id;
+            public string name;
+            public string gender;
+            public string department;
+            public List<string> projects;
+            public student(string i, string n, string g, string d, List<string> p)
+            {
+                id = i; name = n; gender = g; department = d; projects = p;
+            }
+
+        }
+        
+        private void ADD()
+        {
+            int rows = (table.RowCount)-1;
+            File.Delete(filePath);
+            for (int row = 0; row < rows; row++)
+            {
+                List<string> projects = new List<string>();
+                string id = "", name = "", gender = "", department = "";
+                int No_of_col = table.ColumnCount;
+
+                //int row = table.CurrentCell.RowIndex;
+                id = table.Rows[row].Cells[0].Value.ToString();
+                name = table.Rows[row].Cells[1].Value.ToString();
+                gender = table.Rows[row].Cells[2].Value.ToString();
+                department = table.Rows[row].Cells[3].Value.ToString();
+                for (int colindex = 4; colindex < No_of_col; colindex++)
+                {
+                    if (table.Rows[row].Cells[colindex].Value!= null)
+                    {
+                        string pro = table.Rows[row].Cells[colindex].Value.ToString();
+                        projects.Add(pro);
+                    }
+                }
+                student st = new student(id, name, gender, department, projects);
+                
+                //write in xml
+                if (!File.Exists(filePath))
+                {
+                    XmlWriter xw = XmlWriter.Create(filePath);
+                    xw.WriteStartDocument();
+
+                    xw.WriteStartElement("student");
+
+                    xw.WriteStartElement("id");
+                    xw.WriteString(st.id);
+                    xw.WriteEndElement();
+
+                    xw.WriteStartElement("name");
+                    xw.WriteString(st.name);
+                    xw.WriteEndElement();
+
+                    xw.WriteStartElement("gender");
+                    xw.WriteString(st.gender);
+                    xw.WriteEndElement();
+
+                    xw.WriteStartElement("department");
+                    xw.WriteString(st.department);
+                    xw.WriteEndElement();
+
+                    xw.WriteStartElement("projects");
+                    int i = 1;
+                    foreach (string pro in st.projects)
+                    {
+                        xw.WriteStartElement("project" + i);
+                        xw.WriteString(pro);
+                        xw.WriteEndElement();
+                        i++;
+                    }
+                    xw.WriteEndElement();
+
+                    xw.WriteEndElement();
+                    xw.WriteEndDocument();
+                    xw.Close();
+                    
+                }
+                else
+                {
+
+                    XmlDocument Doc = new XmlDocument();
+                    XmlElement student = Doc.CreateElement("student");
+                    XmlElement node;
+                    XmlElement nodein;
+
+                    node = Doc.CreateElement("id");
+                    node.InnerText = st.id;
+                    student.AppendChild(node);
+
+                    node = Doc.CreateElement("name");
+                    node.InnerText = st.name;
+                    student.AppendChild(node);
+
+                    node = Doc.CreateElement("gender");
+                    node.InnerText = st.gender;
+                    student.AppendChild(node);
+
+                    node = Doc.CreateElement("department");
+                    node.InnerText = st.department;
+                    student.AppendChild(node);
+
+                    int i = 1;
+                    node = Doc.CreateElement("project");
+                    foreach (string pro in st.projects)
+                    {
+                        nodein = Doc.CreateElement("project" + i);
+                        nodein.InnerText = pro;
+                        node.AppendChild(nodein);
+                        i++;
+                    }
+                    student.AppendChild(node);
+
+                    Doc.Load(filePath);
+                    XmlElement Root = Doc.DocumentElement;
+                    Root.AppendChild(student);
+                    Doc.Save(filePath);
+                }
+
+            }
+
+                MessageBox.Show("Edit is Done");
+            
+        }
         // Aggregate functions
         private void sum_Click(object sender, EventArgs e)
         {
@@ -285,6 +401,7 @@ namespace file
         private void choice_file_Click(object sender, EventArgs e)
         {
             //choice_fileB.Text = "RELOUD NEW FILE";
+            table.Rows.Clear();
             OpenFileDialog openFileDialog = new OpenFileDialog();
             
                 //openFileDialog.InitialDirectory = "c:\\";
@@ -503,8 +620,14 @@ namespace file
         {
             if (filename == "students.xml")
             {
-                add_student_form st = new add_student_form();
-                st.Show();
+                DialogResult res = MessageBox.Show("if you did not edit yet, Do you wanna Add new row? ", "add new student", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (res == DialogResult.OK)
+                {
+                    add_student_form st = new add_student_form();
+                    st.Show();
+                }
+                else
+                    ADD();
 
             }
             else
@@ -599,7 +722,7 @@ namespace file
         private void search_TX_Click(object sender, EventArgs e)
         {
             search_TX.Text = "";
-            search_TX.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            search_TX.ForeColor = System.Drawing.SystemColors.ControlLight;
         }
 
         private void equal_Click(object sender, EventArgs e)
