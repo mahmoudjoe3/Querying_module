@@ -456,7 +456,158 @@ namespace file
         }
 
 
-     
+        //shafik
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int column = table.CurrentCell.ColumnIndex; 
+            int num_of_row = table.RowCount;
+            num_of_row-- ;
+            removes.Clear();
+            if (comboBox1.Text != "")
+            {
+                
+              
+               
+                if (comboBox1.Text == "=")
+                {
+                    for (int i = 0; i < num_of_row; i++)
+                    {
+
+                        if (Convert.ToInt32(cfield_tx.Text) != Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                        {
+
+                            removes.Add(i);
+
+                        }
+                        
+                       
+                    }
+                    for (int i = 0; i < removes.Count; i++)
+                    {
+                        table.Rows.RemoveAt(removes[i]);
+                        for(int j=0;j<removes.Count;j++)
+                        {
+                            if (i == j) continue;
+                            else { removes[j]--; }
+                        }
+                    }
+                   
+
+                }
+                else if (comboBox1.Text == "<")
+                {
+
+                    for (int i = 0; i < num_of_row; i++)
+                    {
+
+                        if (Convert.ToInt32(cfield_tx.Text) <= Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                        {
+
+                            removes.Add(i);
+
+                        }
+
+                    }
+                    for (int i = 0; i < removes.Count; i++)
+                    {
+                        table.Rows.RemoveAt(removes[i]);
+                        for (int j = 0; j < removes.Count; j++)
+                        {
+                            if (i == j) continue;
+                            else { removes[j]--; }
+                        }
+                    }
+
+
+                }
+                else if (comboBox1.Text == ">")
+                {
+                    for (int i = 0; i < num_of_row; i++)
+                    {
+
+                        if (Convert.ToInt32(cfield_tx.Text) >= Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                        {
+
+                            removes.Add(i);
+
+                        }
+
+                    }
+                    for (int i = 0; i < removes.Count; i++)
+                    {
+                        table.Rows.RemoveAt(removes[i]);
+                        for (int j = 0; j < removes.Count; j++)
+                        {
+                            if (i == j) continue;
+                            else { removes[j]--; }
+                        }
+                    }
+
+                }
+
+                else if (comboBox1.Text == "!=")
+                {
+                    for (int i = 0; i < num_of_row; i++)
+                    {
+
+                        if (Convert.ToInt32(cfield_tx.Text) == Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                        {
+
+                            removes.Add(i);
+
+                        }
+
+                    }
+                    for (int i = 0; i < removes.Count; i++)
+                    {
+                        table.Rows.RemoveAt(removes[i]);
+                        for (int j = 0; j < removes.Count; j++)
+                        {
+                            if (i == j) continue;
+                            else { removes[j]--; }
+                        }
+                    }
+
+                }
+                else if(comboBox1.Text == "in")
+                {
+                    
+
+                    string[] s = cfield_tx.Text.Split(' ');
+                  
+                  int min,max;
+                    min=Convert.ToInt32(s[0]);
+                    max=Convert.ToInt32(s[1]);
+                    for (int i = 0; i < num_of_row; i++)
+                    {
+                        
+                        if (!(min <= Convert.ToInt32(table.Rows[i].Cells[column].Value) && max >= Convert.ToInt32(table.Rows[i].Cells[column].Value)))
+                        {
+
+                            removes.Add(i);
+
+                        }
+
+                    }
+                    for (int i = 0; i < removes.Count; i++)
+                    {
+                        table.Rows.RemoveAt(removes[i]);
+                        for (int j = 0; j < removes.Count; j++)
+                        {
+                            if (i == j) continue;
+                            else { removes[j]--; }
+                        }
+                    }
+
+                    
+
+                }
+
+
+
+
+            }
+        }
 
 
 
@@ -576,188 +727,22 @@ namespace file
 
         private void equal_Click(object sender, EventArgs e)
         {
-            try
-            {
-                int column = table.CurrentCell.ColumnIndex;
-                int num_of_row = table.RowCount;
-                num_of_row--;
-                removes.Clear();
 
-                for (int i = 0; i < num_of_row; i++)
-                {
-
-                    if (Convert.ToInt32(cfield_tx.Text) != Convert.ToInt32(table.Rows[i].Cells[column].Value))
-                    {
-
-                        removes.Add(i);
-
-                    }
-
-
-                }
-                for (int i = 0; i < removes.Count; i++)
-                {
-                    table.Rows.RemoveAt(removes[i]);
-                    for (int j = 0; j < removes.Count; j++)
-                    {
-                        if (i == j) continue;
-                        else { removes[j]--; }
-                    }
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Warinig", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
         }
 
         private void not_equal_Click(object sender, EventArgs e)
         {
-            try
-            {
-                int column = table.CurrentCell.ColumnIndex;
-                int num_of_row = table.RowCount;
-                num_of_row--;
-                removes.Clear();
 
-                for (int i = 0; i < num_of_row; i++)
-                {
-
-                    if (Convert.ToInt32(cfield_tx.Text) == Convert.ToInt32(table.Rows[i].Cells[column].Value))
-                    {
-
-                        removes.Add(i);
-
-                    }
-
-                }
-                for (int i = 0; i < removes.Count; i++)
-                {
-                    table.Rows.RemoveAt(removes[i]);
-                    for (int j = 0; j < removes.Count; j++)
-                    {
-                        if (i == j) continue;
-                        else { removes[j]--; }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Warinig", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
         }
 
         private void great_Click(object sender, EventArgs e)
         {
-            try
-            {
-                int column = table.CurrentCell.ColumnIndex;
-                int num_of_row = table.RowCount;
-                num_of_row--;
-                removes.Clear();
-                for (int i = 0; i < num_of_row; i++)
-                {
 
-                    if (Convert.ToInt32(cfield_tx.Text) >= Convert.ToInt32(table.Rows[i].Cells[column].Value))
-                    {
-
-                        removes.Add(i);
-
-                    }
-
-                }
-                for (int i = 0; i < removes.Count; i++)
-                {
-                    table.Rows.RemoveAt(removes[i]);
-                    for (int j = 0; j < removes.Count; j++)
-                    {
-                        if (i == j) continue;
-                        else { removes[j]--; }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Warinig", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
         }
 
         private void small_Click(object sender, EventArgs e)
         {
-            try
-            {
-                int column = table.CurrentCell.ColumnIndex;
-                int num_of_row = table.RowCount;
-                num_of_row--;
-                removes.Clear();
-                for (int i = 0; i < num_of_row; i++)
-                {
 
-                    if (Convert.ToInt32(cfield_tx.Text) <= Convert.ToInt32(table.Rows[i].Cells[column].Value))
-                    {
-
-                        removes.Add(i);
-
-                    }
-
-                }
-                for (int i = 0; i < removes.Count; i++)
-                {
-                    table.Rows.RemoveAt(removes[i]);
-                    for (int j = 0; j < removes.Count; j++)
-                    {
-                        if (i == j) continue;
-                        else { removes[j]--; }
-                    }
-                }
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Warinig", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void in_range_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int column = table.CurrentCell.ColumnIndex;
-                int num_of_row = table.RowCount;
-                num_of_row--;
-                removes.Clear();
-                string[] s = cfield_tx.Text.Split(' ');
-
-                int min, max;
-                min = Convert.ToInt32(s[0]);
-                max = Convert.ToInt32(s[1]);
-                for (int i = 0; i < num_of_row; i++)
-                {
-
-                    if (!(min <= Convert.ToInt32(table.Rows[i].Cells[column].Value) && max >= Convert.ToInt32(table.Rows[i].Cells[column].Value)))
-                    {
-
-                        removes.Add(i);
-
-                    }
-
-                }
-                for (int i = 0; i < removes.Count; i++)
-                {
-                    table.Rows.RemoveAt(removes[i]);
-                    for (int j = 0; j < removes.Count; j++)
-                    {
-                        if (i == j) continue;
-                        else { removes[j]--; }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Warinig", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
         }
     }
 }
