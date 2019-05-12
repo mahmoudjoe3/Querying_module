@@ -16,7 +16,7 @@ namespace file
     {
         
         //path that i store the xml file in it
-        string filepath = "C:\\Users\\mahmo\\OneDrive\\Desktop\\rrr\\Querying-Module\\file\\xml files\\students.xml";
+        string filepath = Form1.filePath;
         public add_student_form()
         {
             InitializeComponent();
@@ -160,6 +160,7 @@ namespace file
         private void add_b_Click_1(object sender, EventArgs e)
         {
             ADD();
+           
         }
     }
 }

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation11 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            BunifuAnimatorNS.Animation animation12 = new BunifuAnimatorNS.Animation();
             this.table = new System.Windows.Forms.DataGridView();
             this.filepathTX = new System.Windows.Forms.TextBox();
             this.openFile = new System.Windows.Forms.OpenFileDialog();
@@ -44,6 +44,7 @@
             this.Update = new System.Windows.Forms.Button();
             this.choice_fileB = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.studentpanal = new System.Windows.Forms.Panel();
             this.search_B = new System.Windows.Forms.Button();
@@ -68,6 +69,9 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.Boolean = new System.Windows.Forms.Panel();
+            this.conferm = new System.Windows.Forms.Button();
+            this.kind = new System.Windows.Forms.ComboBox();
+            this.value = new System.Windows.Forms.TextBox();
             this.or = new System.Windows.Forms.Button();
             this.and = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -75,9 +79,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.bunifuTransition2 = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.value = new System.Windows.Forms.TextBox();
-            this.kind = new System.Windows.Forms.ComboBox();
-            this.conferm = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -172,12 +173,13 @@
             this.reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
             this.bunifuTransition1.SetDecoration(this.reset, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.reset, BunifuAnimatorNS.DecorationType.None);
-            this.reset.FlatAppearance.BorderSize = 0;
+            this.reset.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.reset.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.reset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(47)))), ((int)(((byte)(189)))));
-            this.reset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(199)))), ((int)(((byte)(228)))));
+            this.reset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            this.reset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.reset.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
+            this.reset.ForeColor = System.Drawing.Color.DarkRed;
             this.reset.Image = global::file.Properties.Resources.eraser;
             this.reset.Location = new System.Drawing.Point(15, 400);
             this.reset.Margin = new System.Windows.Forms.Padding(4);
@@ -206,12 +208,13 @@
             this.view_query.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
             this.bunifuTransition1.SetDecoration(this.view_query, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.view_query, BunifuAnimatorNS.DecorationType.None);
-            this.view_query.FlatAppearance.BorderSize = 0;
+            this.view_query.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.view_query.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.view_query.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(47)))), ((int)(((byte)(189)))));
-            this.view_query.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(199)))), ((int)(((byte)(228)))));
+            this.view_query.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            this.view_query.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.view_query.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.view_query.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
+            this.view_query.ForeColor = System.Drawing.Color.DarkRed;
             this.view_query.Image = global::file.Properties.Resources.Webp_net_resizeimage;
             this.view_query.Location = new System.Drawing.Point(15, 620);
             this.view_query.Margin = new System.Windows.Forms.Padding(4);
@@ -228,12 +231,13 @@
             this.Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
             this.bunifuTransition1.SetDecoration(this.Update, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.Update, BunifuAnimatorNS.DecorationType.None);
-            this.Update.FlatAppearance.BorderSize = 0;
+            this.Update.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.Update.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.Update.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(47)))), ((int)(((byte)(189)))));
-            this.Update.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(199)))), ((int)(((byte)(228)))));
+            this.Update.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            this.Update.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Update.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
+            this.Update.ForeColor = System.Drawing.Color.DarkRed;
             this.Update.Image = global::file.Properties.Resources.update__2_;
             this.Update.Location = new System.Drawing.Point(15, 208);
             this.Update.Margin = new System.Windows.Forms.Padding(4);
@@ -251,12 +255,12 @@
             this.bunifuTransition1.SetDecoration(this.choice_fileB, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.choice_fileB, BunifuAnimatorNS.DecorationType.None);
             this.choice_fileB.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.choice_fileB.FlatAppearance.BorderSize = 0;
             this.choice_fileB.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.choice_fileB.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(47)))), ((int)(((byte)(189)))));
-            this.choice_fileB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(199)))), ((int)(((byte)(228)))));
+            this.choice_fileB.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            this.choice_fileB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.choice_fileB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.choice_fileB.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.choice_fileB.ForeColor = System.Drawing.Color.DarkRed;
             this.choice_fileB.Image = global::file.Properties.Resources.file__1_;
             this.choice_fileB.Location = new System.Drawing.Point(15, 15);
             this.choice_fileB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -271,6 +275,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.filepathTX);
             this.panel3.Controls.Add(this.table);
@@ -282,6 +287,19 @@
             this.panel3.Size = new System.Drawing.Size(980, 516);
             this.panel3.TabIndex = 9;
             this.panel3.Visible = false;
+            // 
+            // button2
+            // 
+            this.bunifuTransition1.SetDecoration(this.button2, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.button2, BunifuAnimatorNS.DecorationType.None);
+            this.button2.Location = new System.Drawing.Point(799, 16);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 28);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Query Entry";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
@@ -308,7 +326,7 @@
             this.studentpanal.Controls.Add(this.label5);
             this.bunifuTransition2.SetDecoration(this.studentpanal, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.studentpanal, BunifuAnimatorNS.DecorationType.None);
-            this.studentpanal.Location = new System.Drawing.Point(672, 769);
+            this.studentpanal.Location = new System.Drawing.Point(252, 766);
             this.studentpanal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.studentpanal.Name = "studentpanal";
             this.studentpanal.Size = new System.Drawing.Size(556, 100);
@@ -317,17 +335,18 @@
             // 
             // search_B
             // 
-            this.search_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
+            this.search_B.BackColor = System.Drawing.Color.Transparent;
             this.search_B.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransition1.SetDecoration(this.search_B, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.search_B, BunifuAnimatorNS.DecorationType.None);
             this.search_B.FlatAppearance.BorderSize = 0;
+            this.search_B.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.search_B.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(199)))), ((int)(((byte)(228)))));
             this.search_B.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.search_B.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold);
             this.search_B.Image = global::file.Properties.Resources.search__1_;
             this.search_B.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.search_B.Location = new System.Drawing.Point(308, 35);
+            this.search_B.Location = new System.Drawing.Point(308, 34);
             this.search_B.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.search_B.Name = "search_B";
             this.search_B.Size = new System.Drawing.Size(44, 32);
@@ -362,7 +381,8 @@
             "department",
             "gender",
             "id",
-            "name"});
+            "name",
+            "project"});
             this.kindOfSearch_CB.Location = new System.Drawing.Point(141, 36);
             this.kindOfSearch_CB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kindOfSearch_CB.Name = "kindOfSearch_CB";
@@ -391,22 +411,22 @@
             // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.HorizBlind;
             this.bunifuTransition1.Cursor = null;
-            animation11.AnimateOnlyDifferences = true;
-            animation11.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation11.BlindCoeff")));
-            animation11.LeafCoeff = 0F;
-            animation11.MaxTime = 1F;
-            animation11.MinTime = 0F;
-            animation11.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation11.MosaicCoeff")));
-            animation11.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation11.MosaicShift")));
-            animation11.MosaicSize = 0;
-            animation11.Padding = new System.Windows.Forms.Padding(0);
-            animation11.RotateCoeff = 0F;
-            animation11.RotateLimit = 0F;
-            animation11.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation11.ScaleCoeff")));
-            animation11.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation11.SlideCoeff")));
-            animation11.TimeCoeff = 0F;
-            animation11.TransparencyCoeff = 0F;
-            this.bunifuTransition1.DefaultAnimation = animation11;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.bunifuTransition1.DefaultAnimation = animation4;
             this.bunifuTransition1.MaxAnimationTime = 30000;
             // 
             // Aggregate
@@ -427,11 +447,10 @@
             // 
             // max
             // 
-            this.max.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
+            this.max.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.max, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.max, BunifuAnimatorNS.DecorationType.None);
             this.max.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.max.FlatAppearance.BorderSize = 0;
             this.max.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(47)))), ((int)(((byte)(189)))));
             this.max.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(199)))), ((int)(((byte)(228)))));
             this.max.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -450,11 +469,10 @@
             // 
             // avg
             // 
-            this.avg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
+            this.avg.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.avg, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.avg, BunifuAnimatorNS.DecorationType.None);
             this.avg.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.avg.FlatAppearance.BorderSize = 0;
             this.avg.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(47)))), ((int)(((byte)(189)))));
             this.avg.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(199)))), ((int)(((byte)(228)))));
             this.avg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -473,11 +491,10 @@
             // 
             // min
             // 
-            this.min.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
+            this.min.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.min, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.min, BunifuAnimatorNS.DecorationType.None);
             this.min.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.min.FlatAppearance.BorderSize = 0;
             this.min.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(47)))), ((int)(((byte)(189)))));
             this.min.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(199)))), ((int)(((byte)(228)))));
             this.min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -496,11 +513,10 @@
             // 
             // sum
             // 
-            this.sum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
+            this.sum.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.sum, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.sum, BunifuAnimatorNS.DecorationType.None);
-            this.sum.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.sum.FlatAppearance.BorderSize = 0;
+            this.sum.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.sum.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(47)))), ((int)(((byte)(189)))));
             this.sum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(199)))), ((int)(((byte)(228)))));
             this.sum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -569,11 +585,10 @@
             // 
             // in_range
             // 
-            this.in_range.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
+            this.in_range.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.in_range, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.in_range, BunifuAnimatorNS.DecorationType.None);
             this.in_range.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.in_range.FlatAppearance.BorderSize = 0;
             this.in_range.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(47)))), ((int)(((byte)(189)))));
             this.in_range.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(199)))), ((int)(((byte)(228)))));
             this.in_range.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -592,11 +607,10 @@
             // 
             // equal
             // 
-            this.equal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
+            this.equal.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.equal, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.equal, BunifuAnimatorNS.DecorationType.None);
             this.equal.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.equal.FlatAppearance.BorderSize = 0;
             this.equal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(47)))), ((int)(((byte)(189)))));
             this.equal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(199)))), ((int)(((byte)(228)))));
             this.equal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -615,11 +629,10 @@
             // 
             // not_equal
             // 
-            this.not_equal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
+            this.not_equal.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.not_equal, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.not_equal, BunifuAnimatorNS.DecorationType.None);
             this.not_equal.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.not_equal.FlatAppearance.BorderSize = 0;
             this.not_equal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(47)))), ((int)(((byte)(189)))));
             this.not_equal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(199)))), ((int)(((byte)(228)))));
             this.not_equal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -638,11 +651,10 @@
             // 
             // small
             // 
-            this.small.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
+            this.small.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.small, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.small, BunifuAnimatorNS.DecorationType.None);
             this.small.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.small.FlatAppearance.BorderSize = 0;
             this.small.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(47)))), ((int)(((byte)(189)))));
             this.small.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(199)))), ((int)(((byte)(228)))));
             this.small.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -661,11 +673,10 @@
             // 
             // great
             // 
-            this.great.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
+            this.great.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.great, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.great, BunifuAnimatorNS.DecorationType.None);
             this.great.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.great.FlatAppearance.BorderSize = 0;
             this.great.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(47)))), ((int)(((byte)(189)))));
             this.great.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(199)))), ((int)(((byte)(228)))));
             this.great.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -734,24 +745,81 @@
             this.Boolean.Controls.Add(this.and);
             this.bunifuTransition2.SetDecoration(this.Boolean, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.Boolean, BunifuAnimatorNS.DecorationType.None);
-            this.Boolean.Location = new System.Drawing.Point(248, 769);
+            this.Boolean.Location = new System.Drawing.Point(812, 768);
             this.Boolean.Margin = new System.Windows.Forms.Padding(4);
             this.Boolean.Name = "Boolean";
             this.Boolean.Size = new System.Drawing.Size(417, 98);
             this.Boolean.TabIndex = 11;
             this.Boolean.Visible = false;
             // 
+            // conferm
+            // 
+            this.conferm.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTransition1.SetDecoration(this.conferm, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.conferm, BunifuAnimatorNS.DecorationType.None);
+            this.conferm.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.conferm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            this.conferm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
+            this.conferm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.conferm.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold);
+            this.conferm.ForeColor = System.Drawing.Color.DarkRed;
+            this.conferm.Location = new System.Drawing.Point(259, 64);
+            this.conferm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.conferm.Name = "conferm";
+            this.conferm.Size = new System.Drawing.Size(148, 34);
+            this.conferm.TabIndex = 10;
+            this.conferm.Text = "Confarm";
+            this.conferm.UseVisualStyleBackColor = false;
+            this.conferm.Click += new System.EventHandler(this.conferm_Click);
+            // 
+            // kind
+            // 
+            this.kind.BackColor = System.Drawing.Color.White;
+            this.bunifuTransition2.SetDecoration(this.kind, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition1.SetDecoration(this.kind, BunifuAnimatorNS.DecorationType.None);
+            this.kind.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold);
+            this.kind.FormattingEnabled = true;
+            this.kind.Items.AddRange(new object[] {
+            "department",
+            "gender",
+            "id",
+            "name"});
+            this.kind.Location = new System.Drawing.Point(259, 2);
+            this.kind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kind.Name = "kind";
+            this.kind.Size = new System.Drawing.Size(148, 32);
+            this.kind.Sorted = true;
+            this.kind.TabIndex = 9;
+            this.kind.Text = "name";
+            this.kind.SelectedIndexChanged += new System.EventHandler(this.kind_SelectedIndexChanged);
+            // 
+            // value
+            // 
+            this.value.BackColor = System.Drawing.Color.Black;
+            this.value.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuTransition1.SetDecoration(this.value, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuTransition2.SetDecoration(this.value, BunifuAnimatorNS.DecorationType.None);
+            this.value.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold);
+            this.value.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.value.Location = new System.Drawing.Point(259, 32);
+            this.value.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.value.Name = "value";
+            this.value.Size = new System.Drawing.Size(149, 32);
+            this.value.TabIndex = 8;
+            this.value.Text = " search";
+            this.value.Click += new System.EventHandler(this.value_click);
+            // 
             // or
             // 
-            this.or.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
+            this.or.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.or, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.or, BunifuAnimatorNS.DecorationType.None);
             this.or.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.or.FlatAppearance.BorderSize = 0;
-            this.or.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(47)))), ((int)(((byte)(189)))));
-            this.or.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(199)))), ((int)(((byte)(228)))));
+            this.or.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            this.or.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
             this.or.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.or.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
+            this.or.ForeColor = System.Drawing.Color.DarkRed;
             this.or.Image = ((System.Drawing.Image)(resources.GetObject("or.Image")));
             this.or.Location = new System.Drawing.Point(124, 0);
             this.or.Margin = new System.Windows.Forms.Padding(4);
@@ -766,15 +834,15 @@
             // 
             // and
             // 
-            this.and.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
+            this.and.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.and, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.and, BunifuAnimatorNS.DecorationType.None);
             this.and.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.and.FlatAppearance.BorderSize = 0;
-            this.and.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(47)))), ((int)(((byte)(189)))));
-            this.and.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(199)))), ((int)(((byte)(228)))));
+            this.and.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            this.and.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
             this.and.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.and.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
+            this.and.ForeColor = System.Drawing.Color.DarkRed;
             this.and.Image = ((System.Drawing.Image)(resources.GetObject("and.Image")));
             this.and.Location = new System.Drawing.Point(4, 0);
             this.and.Margin = new System.Windows.Forms.Padding(4);
@@ -843,76 +911,22 @@
             // 
             this.bunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.VertBlind;
             this.bunifuTransition2.Cursor = null;
-            animation12.AnimateOnlyDifferences = true;
-            animation12.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation12.BlindCoeff")));
-            animation12.LeafCoeff = 0F;
-            animation12.MaxTime = 1F;
-            animation12.MinTime = 0F;
-            animation12.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation12.MosaicCoeff")));
-            animation12.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation12.MosaicShift")));
-            animation12.MosaicSize = 0;
-            animation12.Padding = new System.Windows.Forms.Padding(0);
-            animation12.RotateCoeff = 0F;
-            animation12.RotateLimit = 0F;
-            animation12.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation12.ScaleCoeff")));
-            animation12.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation12.SlideCoeff")));
-            animation12.TimeCoeff = 0F;
-            animation12.TransparencyCoeff = 0F;
-            this.bunifuTransition2.DefaultAnimation = animation12;
-            // 
-            // value
-            // 
-            this.value.BackColor = System.Drawing.Color.Black;
-            this.value.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuTransition1.SetDecoration(this.value, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.value, BunifuAnimatorNS.DecorationType.None);
-            this.value.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold);
-            this.value.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.value.Location = new System.Drawing.Point(258, 32);
-            this.value.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.value.Name = "value";
-            this.value.Size = new System.Drawing.Size(148, 32);
-            this.value.TabIndex = 8;
-            this.value.Text = " search";
-            this.value.Click += new System.EventHandler(this.value_click);
-            // 
-            // kind
-            // 
-            this.kind.BackColor = System.Drawing.Color.White;
-            this.bunifuTransition2.SetDecoration(this.kind, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition1.SetDecoration(this.kind, BunifuAnimatorNS.DecorationType.None);
-            this.kind.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold);
-            this.kind.FormattingEnabled = true;
-            this.kind.Items.AddRange(new object[] {
-            "department",
-            "gender",
-            "id",
-            "name"});
-            this.kind.Location = new System.Drawing.Point(258, 2);
-            this.kind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kind.Name = "kind";
-            this.kind.Size = new System.Drawing.Size(148, 32);
-            this.kind.Sorted = true;
-            this.kind.TabIndex = 9;
-            this.kind.Text = "name";
-            this.kind.SelectedIndexChanged += new System.EventHandler(this.kind_SelectedIndexChanged);
-            // 
-            // conferm
-            // 
-            this.conferm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
-            this.bunifuTransition1.SetDecoration(this.conferm, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuTransition2.SetDecoration(this.conferm, BunifuAnimatorNS.DecorationType.None);
-            this.conferm.FlatAppearance.BorderSize = 0;
-            this.conferm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(199)))), ((int)(((byte)(228)))));
-            this.conferm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.conferm.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold);
-            this.conferm.Location = new System.Drawing.Point(258, 64);
-            this.conferm.Name = "conferm";
-            this.conferm.Size = new System.Drawing.Size(148, 35);
-            this.conferm.TabIndex = 10;
-            this.conferm.Text = "Confarm";
-            this.conferm.UseVisualStyleBackColor = false;
-            this.conferm.Click += new System.EventHandler(this.conferm_Click);
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.bunifuTransition2.DefaultAnimation = animation3;
             // 
             // Form1
             // 
@@ -925,8 +939,8 @@
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.Boolean);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Aggregate);
             this.Controls.Add(this.Comparison);
             this.Controls.Add(this.panel4);
@@ -1007,6 +1021,7 @@
         private System.Windows.Forms.Button conferm;
         private System.Windows.Forms.ComboBox kind;
         private System.Windows.Forms.TextBox value;
+        private System.Windows.Forms.Button button2;
     }
 }
 

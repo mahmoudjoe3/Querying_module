@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml; 
+using System.Xml;
 namespace file
 {
     public partial class Form1 : Form
@@ -16,7 +16,7 @@ namespace file
         DataSet DS = new DataSet();
         List<int>removes=new List<int>();
         string fileContent = "";
-        string filePath = "";
+        public static string filePath = "";
         string filename = "";
         public Form1()
         {
@@ -336,14 +336,16 @@ namespace file
             }
 
         }
-        private void load_noded_xml()
+        private  void load_noded_xml()
         {
-
+            int done = 0;
+            table.Columns.Clear();
             XmlDocument DOC = new XmlDocument();
             DOC.Load(filePath);
             XmlNodeList list = DOC.GetElementsByTagName("student");
             for (int i = 0; i < list.Count; i++)
             {
+                
                 XmlNodeList childs = list[i].ChildNodes;
 
                 string id = childs[0].InnerText;
@@ -359,8 +361,9 @@ namespace file
                     string p1 = projects[j].InnerText;
                     pro[j] = p1;
                 }
-                if (table.ColumnCount == 0)
+                if (table.ColumnCount == 0 ||done==0)
                 {
+                    done++;
                     string h_id = childs[0].Name;
                     string h_name = childs[1].Name;
                     string h_gender = childs[2].Name;
@@ -377,6 +380,7 @@ namespace file
                 }
 
                 string[] row = { id, name, gender, dep, pro[0], pro[1], pro[2], pro[3], pro[4] };
+               
                 table.Rows.Add(row);
             }
         }
@@ -518,10 +522,12 @@ namespace file
                 }
 
 
-
+                string key = "";
+                string[] keys = new string[5];
                 if (kindOfSearch_CB.Text == "name")
                 {
-                    if (searchKEY == name)
+                    key = name;
+                    if (searchKEY == key.ToLower())
                     {
                         string[] row = { id, name, gender, dep, pro[0], pro[1], pro[2], pro[3], pro[4] };
                         table.Rows.Add(row);
@@ -531,7 +537,8 @@ namespace file
 
                 else if (kindOfSearch_CB.Text == "id")
                 {
-                    if (searchKEY == id)
+                    key = id;
+                    if (searchKEY == key.ToLower())
                     {
                         string[] row = { id, name, gender, dep, pro[0], pro[1], pro[2], pro[3], pro[4] };
                         table.Rows.Add(row);
@@ -541,7 +548,8 @@ namespace file
 
                 else if (kindOfSearch_CB.Text == "gender")
                 {
-                    if (searchKEY == gender)
+                    key = gender;
+                    if (searchKEY == key.ToLower())
                     {
                         string[] row = { id, name, gender, dep, pro[0], pro[1], pro[2], pro[3], pro[4] };
                         table.Rows.Add(row);
@@ -551,11 +559,28 @@ namespace file
 
                 else if (kindOfSearch_CB.Text == "department")
                 {
-                    if (searchKEY == dep)
+                    key = dep;
+                    if (searchKEY == key.ToLower())
                     {
                         string[] row = { id, name, gender, dep, pro[0], pro[1], pro[2], pro[3], pro[4] };
                         table.Rows.Add(row);
                         op = "done";
+                    }
+                }
+                if (kindOfSearch_CB.Text == "project")
+                {
+                    keys = pro;
+                    for (int it = 0; it < 5; it++)
+                    {
+                        if (keys[it] != null)
+                        {
+                            if (searchKEY == keys[it].ToLower())
+                            {
+                                string[] row = { id, name, gender, dep, pro[0], pro[1], pro[2], pro[3], pro[4] };
+                                table.Rows.Add(row);
+                                op = "done";
+                            }
+                        }
                     }
                 }
 
@@ -567,7 +592,7 @@ namespace file
         {
             table.Rows.Clear();
             if (search_TX.Text != "")
-                Search(search_TX.Text);
+                Search(search_TX.Text.ToLower());
             else
                 MessageBox.Show("please enter search key");
 
@@ -576,63 +601,63 @@ namespace file
         //for all xml file
         private void loadXml()
         {
+            table.Columns.Clear();
+            DS = new DataSet();
             DS.ReadXml(filePath);
-            table.DataSource = DS.Tables[0];
+            table.DataSource = DS.Tables[0];         
         }
         private void choice_file_Click(object sender, EventArgs e)
         {
-            //choice_fileB.Text = "RELOUD NEW FILE";
-            table.Rows.Clear();
+            
             OpenFileDialog openFileDialog = new OpenFileDialog();
             
                 //openFileDialog.InitialDirectory = "c:\\";
-                openFileDialog.InitialDirectory = "C:\\Users\\mahmo\\OneDrive\\Desktop\\rrr\\Querying-Module\\file\\xml files";
+                openFileDialog.InitialDirectory = "Querying_module\\xml files";
                 openFileDialog.Filter = "xml files (*.xml)|*.xml";
                 openFileDialog.FilterIndex = 2;
-                
-                
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    //Get the path of specified file
-                    filePath = openFileDialog.FileName;
-                    filename = openFileDialog.SafeFileName;
-                    //Read the contents of the file into a stream
-                    var fileStream = openFileDialog.OpenFile();
-
-                    using (StreamReader reader = new StreamReader(fileStream))
-                    {
-                        fileContent = reader.ReadToEnd();
-                    }
-                
-            }
 
 
-            var result = MessageBox.Show(fileContent, "File Content at path: " + filePath, MessageBoxButtons.OKCancel);
-            if (result == DialogResult.OK)
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                filepathTX.Text = filename;
-                if (filename == "students.xml")
-                {
-                    load_noded_xml();
-                    comboBox3.Items.Clear();
-                    comboBox3.Items.Add("Aggregate functions");
-                    comboBox3.Items.Add("Comparison queries");
-                    comboBox3.Items.Add("Boolean opperators");
-                    comboBox3.Items.Add("Search");
-                }
-                else
-                {
-                    loadXml();
-                    comboBox3.Items.Clear();
-                    comboBox3.Items.Add("Aggregate functions");
-                    comboBox3.Items.Add("Comparison queries");
-                    comboBox3.Items.Add("Boolean opperators");
-                    
+                //Get the path of specified file
+                filePath = openFileDialog.FileName;
+                filename = openFileDialog.SafeFileName;
+                //Read the contents of the file into a stream
+                var fileStream = openFileDialog.OpenFile();
 
+                using (StreamReader reader = new StreamReader(fileStream))
+                {
+                    fileContent = reader.ReadToEnd();
                 }
+                var result = MessageBox.Show(fileContent, "File Content at path: " + filePath, MessageBoxButtons.OKCancel);
+                if (result == DialogResult.OK)
+                {
+                    filepathTX.Text = filename;
+                    if (filename == "students.xml")
+                    {
+                        load_noded_xml();
+                        comboBox3.Items.Clear();
+                        comboBox3.Items.Add("Aggregate functions");
+                        comboBox3.Items.Add("Comparison queries");
+                        comboBox3.Items.Add("Boolean opperators");
+                        comboBox3.Items.Add("Search");
+                        comboBox3.Items.Add("All");
+                    }
+                    else
+                    {
+                        loadXml();
+                        comboBox3.Items.Clear();
+                        comboBox3.Items.Add("Aggregate functions");
+                        comboBox3.Items.Add("Comparison queries");
+                        comboBox3.Items.Add("Boolean opperators");
+                        comboBox3.Items.Add("All");
+
+                    }
+                }
+                bunifuTransition1.ShowSync(panel3);
             }
-            bunifuTransition1.ShowSync(panel3);
         }
+
         private void Update_Click(object sender, EventArgs e)
         {
             if (filename == "students.xml")
@@ -642,6 +667,7 @@ namespace file
                 {
                     add_student_form st = new add_student_form();
                     st.Show();
+                    
                 }
                 else
                     edit();
@@ -652,6 +678,7 @@ namespace file
                 try
                 {
                     DS.Tables[0].WriteXml(filePath);
+                    MessageBox.Show("ADD is Done");
                 }
                 catch (Exception ex)
                 {
@@ -661,7 +688,7 @@ namespace file
         }
         private void reset_Click(object sender, EventArgs e)
         {
-            table.Rows.Clear();
+            //table.Columns.Clear();
             if (filename == "students.xml")
             {
                 
@@ -686,53 +713,81 @@ namespace file
 
 
         // GUI CODE
+        private void showAll()
+        {
+            //Aggregate functions
+            bunifuTransition2.ShowSync(Aggregate);
+            bunifuTransition2.ShowSync(sum);
+            bunifuTransition2.ShowSync(avg);
+            bunifuTransition2.ShowSync(min);
+            bunifuTransition2.ShowSync(max);
+            //Comparison queries
+            bunifuTransition2.ShowSync(Comparison);
+            bunifuTransition2.ShowSync(cfield_tx);
+            bunifuTransition2.ShowSync(equal);
+            bunifuTransition2.ShowSync(not_equal);
+            bunifuTransition2.ShowSync(great);
+            bunifuTransition2.ShowSync(small);
+            bunifuTransition2.ShowSync(in_range);
+            //Boolean opperators
+            bunifuTransition2.ShowSync(Boolean);
+            bunifuTransition2.ShowSync(and);
+            bunifuTransition2.ShowSync(or);
+            //search
+            bunifuTransition2.ShowSync(studentpanal);
+        }
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-                if (comboBox3.Text == "Aggregate functions")
-                {
-                    bunifuTransition1.HideSync(studentpanal);
-                    bunifuTransition1.HideSync(Comparison);
-                    bunifuTransition2.HideSync(Boolean);
 
-                    bunifuTransition2.ShowSync(Aggregate);
-                    bunifuTransition2.ShowSync(sum);
-                    bunifuTransition2.ShowSync(avg);
-                    bunifuTransition2.ShowSync(min);
-                    bunifuTransition2.ShowSync(max);
-                }
-                else if (comboBox3.Text == "Comparison queries")
-                {
-                    bunifuTransition1.HideSync(studentpanal);
-                    bunifuTransition1.HideSync(Aggregate);
-                    bunifuTransition2.HideSync(Boolean);
+            if (comboBox3.Text == "Aggregate functions")
+            {
+                bunifuTransition1.HideSync(studentpanal);
+                bunifuTransition1.HideSync(Comparison);
+                bunifuTransition2.HideSync(Boolean);
 
-                    bunifuTransition2.ShowSync(Comparison);
-                    bunifuTransition2.ShowSync(cfield_tx);
-                    bunifuTransition2.ShowSync(equal);
-                    bunifuTransition2.ShowSync(not_equal);
-                    bunifuTransition2.ShowSync(great);
-                    bunifuTransition2.ShowSync(small);
-                    bunifuTransition2.ShowSync(in_range);
-                }
-                else if (comboBox3.Text == "Boolean opperators")
-                {
-                    bunifuTransition1.HideSync(Comparison);
-                    bunifuTransition1.HideSync(Aggregate);
-                    bunifuTransition1.HideSync(studentpanal);
+                bunifuTransition2.ShowSync(Aggregate);
+                bunifuTransition2.ShowSync(sum);
+                bunifuTransition2.ShowSync(avg);
+                bunifuTransition2.ShowSync(min);
+                bunifuTransition2.ShowSync(max);
+            }
+            else if (comboBox3.Text == "Comparison queries")
+            {
+                bunifuTransition1.HideSync(studentpanal);
+                bunifuTransition1.HideSync(Aggregate);
+                bunifuTransition2.HideSync(Boolean);
 
-                    bunifuTransition2.ShowSync(Boolean);
-                    bunifuTransition2.ShowSync(and);
-                    bunifuTransition2.ShowSync(or);
-                }
+                bunifuTransition2.ShowSync(Comparison);
+                bunifuTransition2.ShowSync(cfield_tx);
+                bunifuTransition2.ShowSync(equal);
+                bunifuTransition2.ShowSync(not_equal);
+                bunifuTransition2.ShowSync(great);
+                bunifuTransition2.ShowSync(small);
+                bunifuTransition2.ShowSync(in_range);
+            }
+            else if (comboBox3.Text == "Boolean opperators")
+            {
+                bunifuTransition1.HideSync(Comparison);
+                bunifuTransition1.HideSync(Aggregate);
+                bunifuTransition1.HideSync(studentpanal);
+
+                bunifuTransition2.ShowSync(Boolean);
+                bunifuTransition2.ShowSync(and);
+                bunifuTransition2.ShowSync(or);
+            }
+            else if (comboBox3.Text == "All")
+            {
+                showAll();
+            }
             else
-                {
-                    bunifuTransition1.HideSync(Comparison);
-                    bunifuTransition1.HideSync(Aggregate);
-                    bunifuTransition1.HideSync(Boolean);
+            {
+                bunifuTransition1.HideSync(Comparison);
+                bunifuTransition1.HideSync(Aggregate);
+                bunifuTransition1.HideSync(Boolean);
 
-                    bunifuTransition2.ShowSync(studentpanal);
-                }
+                bunifuTransition2.ShowSync(studentpanal);
+            }
+
 
         }
         private void cfield_tx_Click(object sender, EventArgs e)
@@ -743,8 +798,8 @@ namespace file
         }
         private void kindOfSearch_CB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            search_TX.Text = "";
-            table.Rows.Clear();
+            search_TX.Text = "Search";
+            table.Columns.Clear();
             load_noded_xml();
         }
         private void search_TX_Click(object sender, EventArgs e)
@@ -753,14 +808,15 @@ namespace file
             search_TX.ForeColor = System.Drawing.SystemColors.ControlLight;
         }
         private void value_click(object sender, EventArgs e)
+
         {
-            search_TX.Text = "";
-            search_TX.ForeColor = System.Drawing.SystemColors.ControlLight;
+            value.Text = "";
+            value.ForeColor = System.Drawing.SystemColors.ControlLight;
         }
         private void kind_SelectedIndexChanged(object sender, EventArgs e)
         {
-            search_TX.Text = "";
-            table.Rows.Clear();
+            value.Text = "Condition";
+            table.Columns.Clear();
             load_noded_xml();
         }
 
@@ -773,7 +829,8 @@ namespace file
 
 
 
-       // اكتب هنا يا كشري اللى انت عاوزو
+
+        // اكتب هنا يا كشري اللى انت عاوزو
 
         private void conferm_Click(object sender, EventArgs e)
         {
@@ -789,5 +846,183 @@ namespace file
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            table.Columns.Clear();
+            if (filename == "students.xml")
+            {
+
+                load_noded_xml();
+            }
+            else loadXml();
+
+            try
+            {
+                // Read the query from the user and putting it into an array of strings to determine the query to be executed.
+                string prompt_Val = Prompt.ShowDialog("Enter Query: ", "Query");
+                string[] query = prompt_Val.Split(' ');
+                if (query.Length == 11)
+                {
+                    // In_range query.
+                    if (query[0].ToLower() == "select" && query[2].ToLower() == "from" && query[4].ToLower() == "where" && query[6].ToLower() == ">" && query[8].ToLower() == "and" && query[9].ToLower() == "<")
+                    {
+                        if (query[1] != query[5])
+                            throw new Exception();
+                        bunifuTransition2.ShowSync(Comparison);
+                        bunifuTransition2.ShowSync(cfield_tx);
+                        bunifuTransition2.ShowSync(in_range);
+                        int index;
+                        index = table.Columns[query[1]].Index;
+                        table.CurrentCell = this.table[index, 0];
+                        cfield_tx.Text = query[7] + " " + query[10];
+                        in_range.PerformClick();
+                    }
+                    else if (query[0].ToLower() == "select" && query[2].ToLower() == "from" && query[4].ToLower() == "where" && query[6].ToLower() == "<" && query[8].ToLower() == "and" && query[9].ToLower() == ">")
+                    {
+                        if (query[1] != query[5])
+                            throw new Exception();
+                        bunifuTransition2.ShowSync(Comparison);
+                        bunifuTransition2.ShowSync(cfield_tx);
+                        bunifuTransition2.ShowSync(in_range);
+                        int index;
+                        index = table.Columns[query[1]].Index;
+                        table.CurrentCell = this.table[index, 0];
+                        cfield_tx.Text = query[10] + " " + query[7];
+                        in_range.PerformClick();
+                    }
+                    else
+                        throw new Exception();
+                }
+                else if (query.Length == 8)
+                {
+                    // Smaller query
+                    if (query[0].ToLower() == "select" && query[2].ToLower() == "from" && query[4].ToLower() == "where" && query[6].ToLower() == "<")
+                    {
+                        if (query[1] != query[5])
+                            throw new Exception();
+                        bunifuTransition2.ShowSync(Comparison);
+                        bunifuTransition2.ShowSync(cfield_tx);
+                        bunifuTransition2.ShowSync(small);
+                        int index;
+                        index = table.Columns[query[1]].Index;
+                        table.CurrentCell = this.table[index, 0];
+                        cfield_tx.Text = query[7];
+                        small.PerformClick();
+                    }
+                    // Greater query
+                    else if (query[0].ToLower() == "select" && query[2].ToLower() == "from" && query[4].ToLower() == "where" && query[6].ToLower() == ">")
+                    {
+                        if (query[1] != query[5])
+                            throw new Exception();
+                        bunifuTransition2.ShowSync(Comparison);
+                        bunifuTransition2.ShowSync(cfield_tx);
+                        bunifuTransition2.ShowSync(great);
+                        int index;
+                        index = table.Columns[query[1]].Index;
+                        table.CurrentCell = this.table[index, 0];
+                        cfield_tx.Text = query[7];
+                        great.PerformClick();
+                    }
+                    // Innequality query
+                    else if (query[0].ToLower() == "select" && query[2].ToLower() == "from" && query[4].ToLower() == "where" && (query[6].ToLower() == "!=" || query[6].ToLower() == "<>"))
+                    {
+                        if (query[1] != query[5])
+                            throw new Exception();
+                        bunifuTransition2.ShowSync(Comparison);
+                        bunifuTransition2.ShowSync(cfield_tx);
+                        bunifuTransition2.ShowSync(not_equal);
+                        int index;
+                        index = table.Columns[query[1]].Index;
+                        table.CurrentCell = this.table[index, 0];
+                        cfield_tx.Text = query[7];
+                        not_equal.PerformClick();
+                    }
+                    // Equality query
+                    else if (query[0].ToLower() == "select" && query[2].ToLower() == "from" && query[4].ToLower() == "where" && query[6].ToLower() == "==")
+                    {
+                        if (query[1] != query[5])
+                            throw new Exception();
+                        bunifuTransition2.ShowSync(Comparison);
+                        bunifuTransition2.ShowSync(cfield_tx);
+                        bunifuTransition2.ShowSync(equal);
+                        int index;
+                        index = table.Columns[query[1]].Index;
+                        table.CurrentCell = this.table[index, 0];
+                        cfield_tx.Text = query[7];
+                        equal.PerformClick();
+                    }
+                    // Search query
+                    else if (query[0].ToLower() == "select" && query[2].ToLower() == "from" && query[4].ToLower() == "where" && query[6].ToLower() == "=")
+                    {
+                        if (query[1] != query[5]|| !query[7].Contains("\'"))
+                            throw new Exception();
+                        string[] q7_Split = query[7].Split('\'');
+                        bunifuTransition2.ShowSync(studentpanal);
+                        int index;
+                        index = table.Columns[query[1]].Index;
+                        table.CurrentCell = this.table[index, 0];
+                        kindOfSearch_CB.Text = query[1];
+                        search_TX.Text = q7_Split[1];
+                        search_B.PerformClick();
+                    }
+                    else
+                        throw new Exception();
+                }
+                else if (query.Length == 3)
+                {
+                    string[] query_Split = query[1].Split('(', ')');
+                    // Sum query
+                    if (query[0].ToLower() == "select" && query_Split[0].ToLower()=="sum" &&query_Split[2].ToLower() == "from")
+                    {
+                        bunifuTransition2.ShowSync(Aggregate);
+                        bunifuTransition2.ShowSync(sum);
+                        int index;
+                        index = table.Columns[query_Split[1]].Index;
+                        table.CurrentCell = this.table[index, 0];
+                        sum.PerformClick();
+                    }
+                    // Average query
+                    else if (query[0].ToLower() == "select" && query_Split[0].ToLower() == "avg" && query_Split[2].ToLower() == "from")
+                    {
+                        bunifuTransition2.ShowSync(Aggregate);
+                        bunifuTransition2.ShowSync(avg);
+                        int index;
+                        index = table.Columns[query_Split[1]].Index;
+                        table.CurrentCell = this.table[index, 0];
+                        avg.PerformClick();
+                    }
+                    // Minimum query
+                    else if (query[0].ToLower() == "select" && query_Split[0].ToLower() == "min" && query_Split[2].ToLower() == "from")
+                    {
+                        bunifuTransition2.ShowSync(Aggregate);
+                        bunifuTransition2.ShowSync(min);
+                        int index;
+                        index = table.Columns[query_Split[1]].Index;
+                        table.CurrentCell = this.table[index, 0];
+                        min.PerformClick();
+                    }
+                    // Maximum query
+                    else if (query[0].ToLower() == "select" && query_Split[0].ToLower() == "max" && query_Split[2].ToLower() == "from")
+                    {
+                        bunifuTransition2.ShowSync(Aggregate);
+                        bunifuTransition2.ShowSync(max);
+                        int index;
+                        index = table.Columns[query_Split[1]].Index;
+                        table.CurrentCell = this.table[index, 0];
+                        max.PerformClick();
+                    }
+                    else
+                        throw new Exception();
+                }
+                else
+                    throw new Exception();
+            }
+            catch (Exception ae)
+            {
+                MessageBox.Show("If you get this error message, then you should take care of the following rules whilst you're writing queries: " + "\n" + "1-Leave exactly one space between words" + "\n"+"2-Make sure the spelling is correct.");
+            }
+        }
+
     }
 }

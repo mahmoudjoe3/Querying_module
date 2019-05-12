@@ -67,3 +67,33 @@ E:\fcis\projects\4file\Querying_module\file\obj\Debug\file.Form1.resources
 E:\fcis\projects\4file\Querying_module\file\obj\Debug\file.add_student_form.resources
 E:\fcis\projects\4file\Querying_module\file\obj\Debug\file.Properties.Resources.resources
 E:\fcis\projects\4file\Querying_module\file\obj\Debug\file.csproj.GenerateResource.Cache
+F:\Assignment 2\Assignment 2\Querying_module-20190511T160106Z-001\Querying_module\file\bin\Debug\file.exe.config
+F:\Assignment 2\Assignment 2\Querying_module-20190511T160106Z-001\Querying_module\file\obj\Debug\file.exe
+F:\Assignment 2\Assignment 2\Querying_module-20190511T160106Z-001\Querying_module\file\obj\Debug\file.pdb
+F:\Assignment 2\Assignment 2\Querying_module-20190511T160106Z-001\Querying_module\file\obj\Debug\file.csprojResolveAssemblyReference.cache
+F:\Assignment 2\Assignment 2\Querying_module-20190511T160106Z-001\Querying_module\file\obj\Debug\file.Form1.resources
+F:\Assignment 2\Assignment 2\Querying_module-20190511T160106Z-001\Querying_module\file\obj\Debug\file.add_student_form.resources
+F:\Assignment 2\Assignment 2\Querying_module-20190511T160106Z-001\Querying_module\file\obj\Debug\file.Properties.Resources.resources
+F:\Assignment 2\Assignment 2\Querying_module-20190511T160106Z-001\Querying_module\file\obj\Debug\file.csproj.GenerateResource.Cache
+F:\Assignment 2\Assignment 2\Querying_module-20190511T160106Z-001\Querying_module\file\bin\Debug\file.exe
+F:\Assignment 2\Assignment 2\Querying_module-20190511T160106Z-001\Querying_module\file\bin\Debug\file.pdb
+C:\Users\N\Desktop\Querying_module\file\bin\Debug\file.exe.config
+C:\Users\N\Desktop\Querying_module\file\obj\Debug\file.exe
+C:\Users\N\Desktop\Querying_module\file\obj\Debug\file.pdb
+C:\Users\N\Desktop\Querying_module\file\bin\Debug\file.exe
+C:\Users\N\Desktop\Querying_module\file\bin\Debug\file.pdb
+C:\Users\N\Desktop\Querying_module\file\obj\Debug\file.csprojResolveAssemblyReference.cache
+C:\Users\N\Desktop\Querying_module\file\obj\Debug\file.Form1.resources
+C:\Users\N\Desktop\Querying_module\file\obj\Debug\file.add_student_form.resources
+C:\Users\N\Desktop\Querying_module\file\obj\Debug\file.Properties.Resources.resources
+C:\Users\N\Desktop\Querying_module\file\obj\Debug\file.csproj.GenerateResource.Cache
+E:\Querying_module\file\bin\Debug\file.exe.config
+E:\Querying_module\file\obj\Debug\file.exe
+E:\Querying_module\file\obj\Debug\file.pdb
+E:\Querying_module\file\bin\Debug\file.exe
+E:\Querying_module\file\bin\Debug\file.pdb
+E:\Querying_module\file\obj\Debug\file.csprojResolveAssemblyReference.cache
+E:\Querying_module\file\obj\Debug\file.Form1.resources
+E:\Querying_module\file\obj\Debug\file.add_student_form.resources
+E:\Querying_module\file\obj\Debug\file.Properties.Resources.resources
+E:\Querying_module\file\obj\Debug\file.csproj.GenerateResource.Cache

@@ -1,0 +1,22 @@
+//Small query
+select id from student where id < 3
+//Big query
+select id from student where id > 3
+//In range query
+select id from student where id > 2 and < 124
+//Equality query
+select id from student where id == 3
+//Innequality query
+select id from student where id <> 3
+//Innequality query
+select id from student where id != 3
+//Sum query
+select sum(id)from student
+//Average query
+select avg(id)from student
+//Min query
+select min(id)from student
+//Max query
+select max(id)from student
+//Search query
+select id from student where id = '123'
