@@ -1,4 +1,4 @@
-﻿namespace file
+namespace file
 {
     partial class Form1
     {
@@ -89,9 +89,9 @@
             this.panel4.SuspendLayout();
             this.Boolean.SuspendLayout();
             this.SuspendLayout();
-            // 
+            //
             // table
-            // 
+            //
             this.table.BackgroundColor = System.Drawing.Color.White;
             this.table.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -103,9 +103,9 @@
             this.table.RowTemplate.Height = 24;
             this.table.Size = new System.Drawing.Size(920, 449);
             this.table.TabIndex = 0;
-            // 
+            //
             // filepathTX
-            // 
+            //
             this.bunifuTransition1.SetDecoration(this.filepathTX, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.filepathTX, BunifuAnimatorNS.DecorationType.None);
             this.filepathTX.Location = new System.Drawing.Point(267, 20);
@@ -113,14 +113,14 @@
             this.filepathTX.Name = "filepathTX";
             this.filepathTX.Size = new System.Drawing.Size(488, 22);
             this.filepathTX.TabIndex = 2;
-            // 
+            //
             // openFile
-            // 
+            //
             this.openFile.FileName = "open";
             this.openFile.Filter = "(*.xml)|*.xml";
-            // 
+            //
             // panel1
-            // 
+            //
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.button1);
             this.bunifuTransition2.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
@@ -131,9 +131,9 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1440, 36);
             this.panel1.TabIndex = 7;
-            // 
+            //
             // button1
-            // 
+            //
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.bunifuTransition1.SetDecoration(this.button1, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.button1, BunifuAnimatorNS.DecorationType.None);
@@ -151,9 +151,9 @@
             this.button1.Text = "x";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_3);
-            // 
+            //
             // panel2
-            // 
+            //
             this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.Controls.Add(this.reset);
             this.panel2.Controls.Add(this.panel7);
@@ -167,9 +167,9 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(227, 850);
             this.panel2.TabIndex = 8;
-            // 
+            //
             // reset
-            // 
+            //
             this.reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
             this.bunifuTransition1.SetDecoration(this.reset, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.reset, BunifuAnimatorNS.DecorationType.None);
@@ -190,9 +190,9 @@
             this.reset.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.reset.UseVisualStyleBackColor = false;
             this.reset.Click += new System.EventHandler(this.reset_Click);
-            // 
+            //
             // panel7
-            // 
+            //
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bunifuTransition2.SetDecoration(this.panel7, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.panel7, BunifuAnimatorNS.DecorationType.None);
@@ -202,9 +202,9 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(13, 850);
             this.panel7.TabIndex = 15;
-            // 
+            //
             // view_query
-            // 
+            //
             this.view_query.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
             this.bunifuTransition1.SetDecoration(this.view_query, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.view_query, BunifuAnimatorNS.DecorationType.None);
@@ -225,9 +225,9 @@
             this.view_query.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.view_query.UseVisualStyleBackColor = false;
             this.view_query.Click += new System.EventHandler(this.view_query_Click);
-            // 
+            //
             // Update
-            // 
+            //
             this.Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
             this.bunifuTransition1.SetDecoration(this.Update, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.Update, BunifuAnimatorNS.DecorationType.None);
@@ -248,9 +248,9 @@
             this.Update.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Update.UseVisualStyleBackColor = false;
             this.Update.Click += new System.EventHandler(this.Update_Click);
-            // 
+            //
             // choice_fileB
-            // 
+            //
             this.choice_fileB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(151)))), ((int)(((byte)(221)))));
             this.bunifuTransition1.SetDecoration(this.choice_fileB, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.choice_fileB, BunifuAnimatorNS.DecorationType.None);
@@ -271,9 +271,9 @@
             this.choice_fileB.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.choice_fileB.UseVisualStyleBackColor = false;
             this.choice_fileB.Click += new System.EventHandler(this.choice_file_Click);
-            // 
+            //
             // panel3
-            // 
+            //
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.label2);
@@ -287,9 +287,9 @@
             this.panel3.Size = new System.Drawing.Size(980, 516);
             this.panel3.TabIndex = 9;
             this.panel3.Visible = false;
-            // 
+            //
             // button2
-            // 
+            //
             this.bunifuTransition1.SetDecoration(this.button2, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.button2, BunifuAnimatorNS.DecorationType.None);
             this.button2.Location = new System.Drawing.Point(799, 16);
@@ -300,9 +300,9 @@
             this.button2.Text = "Query Entry";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
+            //
             // label2
-            // 
+            //
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
@@ -316,9 +316,9 @@
             this.label2.Size = new System.Drawing.Size(205, 35);
             this.label2.TabIndex = 3;
             this.label2.Text = "Your File Name is :";
-            // 
+            //
             // studentpanal
-            // 
+            //
             this.studentpanal.BackColor = System.Drawing.Color.Transparent;
             this.studentpanal.Controls.Add(this.search_B);
             this.studentpanal.Controls.Add(this.search_TX);
@@ -332,9 +332,9 @@
             this.studentpanal.Size = new System.Drawing.Size(556, 100);
             this.studentpanal.TabIndex = 13;
             this.studentpanal.Visible = false;
-            // 
+            //
             // search_B
-            // 
+            //
             this.search_B.BackColor = System.Drawing.Color.Transparent;
             this.search_B.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransition1.SetDecoration(this.search_B, BunifuAnimatorNS.DecorationType.None);
@@ -353,9 +353,9 @@
             this.search_B.TabIndex = 8;
             this.search_B.UseVisualStyleBackColor = false;
             this.search_B.Click += new System.EventHandler(this.search_B_Click);
-            // 
+            //
             // search_TX
-            // 
+            //
             this.search_TX.BackColor = System.Drawing.Color.Black;
             this.search_TX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bunifuTransition1.SetDecoration(this.search_TX, BunifuAnimatorNS.DecorationType.None);
@@ -369,9 +369,9 @@
             this.search_TX.TabIndex = 7;
             this.search_TX.Text = " search";
             this.search_TX.Click += new System.EventHandler(this.search_TX_Click);
-            // 
+            //
             // kindOfSearch_CB
-            // 
+            //
             this.kindOfSearch_CB.BackColor = System.Drawing.Color.White;
             this.bunifuTransition2.SetDecoration(this.kindOfSearch_CB, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.kindOfSearch_CB, BunifuAnimatorNS.DecorationType.None);
@@ -391,9 +391,9 @@
             this.kindOfSearch_CB.TabIndex = 6;
             this.kindOfSearch_CB.Text = "name";
             this.kindOfSearch_CB.SelectedIndexChanged += new System.EventHandler(this.kindOfSearch_CB_SelectedIndexChanged);
-            // 
+            //
             // label5
-            // 
+            //
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.label5, BunifuAnimatorNS.DecorationType.None);
@@ -406,9 +406,9 @@
             this.label5.Size = new System.Drawing.Size(131, 35);
             this.label5.TabIndex = 5;
             this.label5.Text = "Search By :";
-            // 
+            //
             // bunifuTransition1
-            // 
+            //
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.HorizBlind;
             this.bunifuTransition1.Cursor = null;
             animation4.AnimateOnlyDifferences = true;
@@ -428,9 +428,9 @@
             animation4.TransparencyCoeff = 0F;
             this.bunifuTransition1.DefaultAnimation = animation4;
             this.bunifuTransition1.MaxAnimationTime = 30000;
-            // 
+            //
             // Aggregate
-            // 
+            //
             this.Aggregate.BackColor = System.Drawing.Color.Transparent;
             this.Aggregate.Controls.Add(this.max);
             this.Aggregate.Controls.Add(this.avg);
@@ -444,9 +444,9 @@
             this.Aggregate.Size = new System.Drawing.Size(976, 127);
             this.Aggregate.TabIndex = 2;
             this.Aggregate.Visible = false;
-            // 
+            //
             // max
-            // 
+            //
             this.max.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.max, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.max, BunifuAnimatorNS.DecorationType.None);
@@ -466,9 +466,9 @@
             this.max.UseVisualStyleBackColor = false;
             this.max.Visible = false;
             this.max.Click += new System.EventHandler(this.max_Click);
-            // 
+            //
             // avg
-            // 
+            //
             this.avg.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.avg, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.avg, BunifuAnimatorNS.DecorationType.None);
@@ -488,9 +488,9 @@
             this.avg.UseVisualStyleBackColor = false;
             this.avg.Visible = false;
             this.avg.Click += new System.EventHandler(this.avg_Click);
-            // 
+            //
             // min
-            // 
+            //
             this.min.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.min, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.min, BunifuAnimatorNS.DecorationType.None);
@@ -510,9 +510,9 @@
             this.min.UseVisualStyleBackColor = false;
             this.min.Visible = false;
             this.min.Click += new System.EventHandler(this.min_Click);
-            // 
+            //
             // sum
-            // 
+            //
             this.sum.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.sum, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.sum, BunifuAnimatorNS.DecorationType.None);
@@ -532,9 +532,9 @@
             this.sum.UseVisualStyleBackColor = false;
             this.sum.Visible = false;
             this.sum.Click += new System.EventHandler(this.sum_Click);
-            // 
+            //
             // Comparison
-            // 
+            //
             this.Comparison.BackColor = System.Drawing.Color.Transparent;
             this.Comparison.Controls.Add(this.label4);
             this.Comparison.Controls.Add(this.cfield_tx);
@@ -551,9 +551,9 @@
             this.Comparison.Size = new System.Drawing.Size(200, 750);
             this.Comparison.TabIndex = 4;
             this.Comparison.Visible = false;
-            // 
+            //
             // label4
-            // 
+            //
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.label4, BunifuAnimatorNS.DecorationType.None);
@@ -566,9 +566,9 @@
             this.label4.Size = new System.Drawing.Size(121, 26);
             this.label4.TabIndex = 4;
             this.label4.Text = "Add Number :";
-            // 
+            //
             // cfield_tx
-            // 
+            //
             this.bunifuTransition1.SetDecoration(this.cfield_tx, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.cfield_tx, BunifuAnimatorNS.DecorationType.None);
             this.cfield_tx.Font = new System.Drawing.Font("Segoe Print", 9F, System.Drawing.FontStyle.Bold);
@@ -582,9 +582,9 @@
             this.cfield_tx.Text = "Comparison Field";
             this.cfield_tx.Visible = false;
             this.cfield_tx.Click += new System.EventHandler(this.cfield_tx_Click);
-            // 
+            //
             // in_range
-            // 
+            //
             this.in_range.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.in_range, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.in_range, BunifuAnimatorNS.DecorationType.None);
@@ -604,9 +604,9 @@
             this.in_range.UseVisualStyleBackColor = false;
             this.in_range.Visible = false;
             this.in_range.Click += new System.EventHandler(this.in_range_Click);
-            // 
+            //
             // equal
-            // 
+            //
             this.equal.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.equal, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.equal, BunifuAnimatorNS.DecorationType.None);
@@ -626,9 +626,9 @@
             this.equal.UseVisualStyleBackColor = false;
             this.equal.Visible = false;
             this.equal.Click += new System.EventHandler(this.equal_Click);
-            // 
+            //
             // not_equal
-            // 
+            //
             this.not_equal.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.not_equal, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.not_equal, BunifuAnimatorNS.DecorationType.None);
@@ -648,9 +648,9 @@
             this.not_equal.UseVisualStyleBackColor = false;
             this.not_equal.Visible = false;
             this.not_equal.Click += new System.EventHandler(this.not_equal_Click);
-            // 
+            //
             // small
-            // 
+            //
             this.small.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.small, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.small, BunifuAnimatorNS.DecorationType.None);
@@ -670,9 +670,9 @@
             this.small.UseVisualStyleBackColor = false;
             this.small.Visible = false;
             this.small.Click += new System.EventHandler(this.small_Click);
-            // 
+            //
             // great
-            // 
+            //
             this.great.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.great, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.great, BunifuAnimatorNS.DecorationType.None);
@@ -692,9 +692,9 @@
             this.great.UseVisualStyleBackColor = false;
             this.great.Visible = false;
             this.great.Click += new System.EventHandler(this.great_Click);
-            // 
+            //
             // label3
-            // 
+            //
             this.label3.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.label3, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.label3, BunifuAnimatorNS.DecorationType.None);
@@ -707,9 +707,9 @@
             this.label3.Size = new System.Drawing.Size(170, 26);
             this.label3.TabIndex = 0;
             this.label3.Text = "Choose Of Following :";
-            // 
+            //
             // comboBox3
-            // 
+            //
             this.bunifuTransition2.SetDecoration(this.comboBox3, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.comboBox3, BunifuAnimatorNS.DecorationType.None);
             this.comboBox3.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold);
@@ -720,9 +720,9 @@
             this.comboBox3.Size = new System.Drawing.Size(183, 32);
             this.comboBox3.TabIndex = 1;
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
-            // 
+            //
             // panel4
-            // 
+            //
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.Controls.Add(this.comboBox3);
             this.panel4.Controls.Add(this.label3);
@@ -734,9 +734,9 @@
             this.panel4.Size = new System.Drawing.Size(184, 68);
             this.panel4.TabIndex = 10;
             this.panel4.Visible = false;
-            // 
+            //
             // Boolean
-            // 
+            //
             this.Boolean.BackColor = System.Drawing.Color.Transparent;
             this.Boolean.Controls.Add(this.conferm);
             this.Boolean.Controls.Add(this.kind);
@@ -751,9 +751,9 @@
             this.Boolean.Size = new System.Drawing.Size(417, 98);
             this.Boolean.TabIndex = 11;
             this.Boolean.Visible = false;
-            // 
+            //
             // conferm
-            // 
+            //
             this.conferm.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.conferm, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.conferm, BunifuAnimatorNS.DecorationType.None);
@@ -771,9 +771,9 @@
             this.conferm.Text = "Confarm";
             this.conferm.UseVisualStyleBackColor = false;
             this.conferm.Click += new System.EventHandler(this.conferm_Click);
-            // 
+            //
             // kind
-            // 
+            //
             this.kind.BackColor = System.Drawing.Color.White;
             this.bunifuTransition2.SetDecoration(this.kind, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.kind, BunifuAnimatorNS.DecorationType.None);
@@ -792,9 +792,9 @@
             this.kind.TabIndex = 9;
             this.kind.Text = "name";
             this.kind.SelectedIndexChanged += new System.EventHandler(this.kind_SelectedIndexChanged);
-            // 
+            //
             // value
-            // 
+            //
             this.value.BackColor = System.Drawing.Color.Black;
             this.value.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bunifuTransition1.SetDecoration(this.value, BunifuAnimatorNS.DecorationType.None);
@@ -808,9 +808,9 @@
             this.value.TabIndex = 8;
             this.value.Text = " search";
             this.value.Click += new System.EventHandler(this.value_click);
-            // 
+            //
             // or
-            // 
+            //
             this.or.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.or, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.or, BunifuAnimatorNS.DecorationType.None);
@@ -831,9 +831,9 @@
             this.or.UseVisualStyleBackColor = false;
             this.or.Visible = false;
             this.or.Click += new System.EventHandler(this.or_Click);
-            // 
+            //
             // and
-            // 
+            //
             this.and.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.and, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition2.SetDecoration(this.and, BunifuAnimatorNS.DecorationType.None);
@@ -854,9 +854,9 @@
             this.and.UseVisualStyleBackColor = false;
             this.and.Visible = false;
             this.and.Click += new System.EventHandler(this.and_Click);
-            // 
+            //
             // label1
-            // 
+            //
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTransition1.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
@@ -870,9 +870,9 @@
             this.label1.Size = new System.Drawing.Size(474, 54);
             this.label1.TabIndex = 12;
             this.label1.Text = "Welcome To Querying Module";
-            // 
+            //
             // panel5
-            // 
+            //
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bunifuTransition2.SetDecoration(this.panel5, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.panel5, BunifuAnimatorNS.DecorationType.None);
@@ -882,9 +882,9 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(13, 850);
             this.panel5.TabIndex = 14;
-            // 
+            //
             // panel6
-            // 
+            //
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bunifuTransition2.SetDecoration(this.panel6, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.panel6, BunifuAnimatorNS.DecorationType.None);
@@ -894,9 +894,9 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1427, 14);
             this.panel6.TabIndex = 15;
-            // 
+            //
             // panel8
-            // 
+            //
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bunifuTransition2.SetDecoration(this.panel8, BunifuAnimatorNS.DecorationType.None);
             this.bunifuTransition1.SetDecoration(this.panel8, BunifuAnimatorNS.DecorationType.None);
@@ -906,9 +906,9 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1427, 14);
             this.panel8.TabIndex = 16;
-            // 
+            //
             // bunifuTransition2
-            // 
+            //
             this.bunifuTransition2.AnimationType = BunifuAnimatorNS.AnimationType.VertBlind;
             this.bunifuTransition2.Cursor = null;
             animation3.AnimateOnlyDifferences = true;
@@ -927,9 +927,9 @@
             animation3.TimeCoeff = 0F;
             animation3.TransparencyCoeff = 0F;
             this.bunifuTransition2.DefaultAnimation = animation3;
-            // 
+            //
             // Form1
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
@@ -1024,4 +1024,3 @@
         private System.Windows.Forms.Button button2;
     }
 }
-

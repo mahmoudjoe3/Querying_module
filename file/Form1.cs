@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -345,7 +345,7 @@ namespace file
             XmlNodeList list = DOC.GetElementsByTagName("student");
             for (int i = 0; i < list.Count; i++)
             {
-                
+
                 XmlNodeList childs = list[i].ChildNodes;
 
                 string id = childs[0].InnerText;
@@ -380,7 +380,7 @@ namespace file
                 }
 
                 string[] row = { id, name, gender, dep, pro[0], pro[1], pro[2], pro[3], pro[4] };
-               
+
                 table.Rows.Add(row);
             }
         }
@@ -408,7 +408,7 @@ namespace file
                     }
                 }
                 student st = new student(id, name, gender, department, projects);
-                
+
                 //write in xml
                 if (!File.Exists(filePath))
                 {
@@ -447,7 +447,7 @@ namespace file
                     xw.WriteEndElement();
                     xw.WriteEndDocument();
                     xw.Close();
-                    
+
                 }
                 else
                 {
@@ -493,7 +493,7 @@ namespace file
             }
 
                 MessageBox.Show("Edit is Done");
-            
+
         }
         public void Search(string searchKEY)
         {
@@ -604,13 +604,13 @@ namespace file
             table.Columns.Clear();
             DS = new DataSet();
             DS.ReadXml(filePath);
-            table.DataSource = DS.Tables[0];         
+            table.DataSource = DS.Tables[0];
         }
         private void choice_file_Click(object sender, EventArgs e)
         {
-            
+
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            
+
                 //openFileDialog.InitialDirectory = "c:\\";
                 openFileDialog.InitialDirectory = "Querying_module\\xml files";
                 openFileDialog.Filter = "xml files (*.xml)|*.xml";
@@ -667,7 +667,7 @@ namespace file
                 {
                     add_student_form st = new add_student_form();
                     st.Show();
-                    
+
                 }
                 else
                     edit();
@@ -691,7 +691,7 @@ namespace file
             //table.Columns.Clear();
             if (filename == "students.xml")
             {
-                
+
                 load_noded_xml();
             }
             else loadXml();
