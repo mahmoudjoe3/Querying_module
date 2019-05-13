@@ -361,26 +361,27 @@ namespace file
                     string p1 = projects[j].InnerText;
                     pro[j] = p1;
                 }
-                if (Grid.ColumnCount == 0 ||done==0)
+                if (table.ColumnCount == 0 ||done==0)
                 {
                     done++;
                     string h_id = childs[0].Name;
                     string h_name = childs[1].Name;
                     string h_gender = childs[2].Name;
                     string h_dep = childs[3].Name;
-                    Grid.Columns.Add("ID", h_id);
-                    Grid.Columns.Add("NAME", h_name);
-                    Grid.Columns.Add("GENDER", h_gender);
-                    Grid.Columns.Add("DEPARTMENT", h_dep);
-                    Grid.Columns.Add("PRO1", "project 1");
-                    Grid.Columns.Add("PRO2", "project 2");
-                    Grid.Columns.Add("PRO3", "project 3");
-                    Grid.Columns.Add("PRO4", "project 4");
-                    Grid.Columns.Add("PRO5", "project 5");
+                    table.Columns.Add("ID", h_id);
+                    table.Columns.Add("NAME", h_name);
+                    table.Columns.Add("GENDER", h_gender);
+                    table.Columns.Add("DEPARTMENT", h_dep);
+                    table.Columns.Add("PRO1", "project 1");
+                    table.Columns.Add("PRO2", "project 2");
+                    table.Columns.Add("PRO3", "project 3");
+                    table.Columns.Add("PRO4", "project 4");
+                    table.Columns.Add("PRO5", "project 5");
                 }
 
                 string[] row = { id, name, gender, dep, pro[0], pro[1], pro[2], pro[3], pro[4] };
-                Grid.Rows.Add(row);
+
+                table.Rows.Add(row);
             }
         }
         private void edit()
@@ -634,9 +635,6 @@ namespace file
                     filepathTX.Text = filename;
                     if (filename == "students.xml")
                     {
-                        Grid.Visible = true;
-                        table.Visible = false;
-
                         load_noded_xml();
                         comboBox3.Items.Clear();
                         comboBox3.Items.Add("Aggregate functions");
@@ -647,8 +645,6 @@ namespace file
                     }
                     else
                     {
-                        table.Visible = true;
-                        Grid.Visible = false;
                         loadXml();
                         comboBox3.Items.Clear();
                         comboBox3.Items.Add("Aggregate functions");
