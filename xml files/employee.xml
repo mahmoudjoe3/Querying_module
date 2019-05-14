@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<table>
+  <employee>
+    <name>ahmed</name>
+    <id>123</id>
+    <salary>1500</salary>
+  </employee>
+  <employee>
+    <name>youssif</name>
+    <id>124</id>
+    <salary>2000</salary>
+  </employee>
+  <employee>
+    <name>mahmoud</name>
+    <id>125</id>
+    <salary>2100</salary>
+  </employee>
+  <employee>
+    <name>mohamed</name>
+    <id>126</id>
+    <salary>2200</salary>
+  </employee>
+  <employee>
+    <name>momen</name>
+    <id>127</id>
+    <salary>2300</salary>
+  </employee>
+</table>

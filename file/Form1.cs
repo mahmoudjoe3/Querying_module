@@ -15,12 +15,20 @@ namespace file
     {
         DataSet DS = new DataSet();
         List<int>removes=new List<int>();
+        List<int> remo = new List<int>();
         string fileContent = "";
         public static string filePath = "";
         string filename = "";
+
+        string oper1;
+        int value1;
+        string oper2;
+        int value2;
+
         public Form1()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
         // Aggregate functions
@@ -733,8 +741,10 @@ namespace file
             bunifuTransition2.ShowSync(Boolean);
             bunifuTransition2.ShowSync(and);
             bunifuTransition2.ShowSync(or);
-            //search
-            bunifuTransition2.ShowSync(studentpanal);
+            if (filename == "students.xml")
+            { //search
+                bunifuTransition2.ShowSync(studentpanal);
+            }
         }
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -815,9 +825,8 @@ namespace file
         }
         private void kind_SelectedIndexChanged(object sender, EventArgs e)
         {
-            value.Text = "Condition";
-            table.Columns.Clear();
-            load_noded_xml();
+            value.Text = "value";
+            cfield_tx.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
         }
 
 
@@ -834,17 +843,758 @@ namespace file
 
         private void conferm_Click(object sender, EventArgs e)
         {
-
+            oper1 = Operator.Text;
+            Operator.Text = "Operator";
+            value1 = Convert.ToInt32(value.Text);
+            value.Text = "Value";
         }
 
         private void and_Click(object sender, EventArgs e)
         {
+            
+            oper2 = Operator.Text;
+            value2 = Convert.ToInt32(value.Text);
+            
+            try
+            {
 
+                int column = table.CurrentCell.ColumnIndex;
+                int num_of_row = table.RowCount;
+                num_of_row--;
+                removes.Clear();
+                if (oper1 == "!=") {
+                if(oper2=="!=")
+                {
+
+                    for (int i = 0; i < num_of_row; i++)
+                    {
+
+                        if (value1 == Convert.ToInt32(table.Rows[i].Cells[column].Value) || value2 == Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                        {
+
+                            removes.Add(i);
+
+                        }
+
+
+                    }
+                    for (int i = 0; i < removes.Count; i++)
+                    {
+                        table.Rows.RemoveAt(removes[i]);
+                        for (int j = 0; j < removes.Count; j++)
+                        {
+                            if (i == j) continue;
+                            else { removes[j]--; }
+                        }
+                    }
+
+                }
+              
+                else if(oper2==">")
+                {
+                    for (int i = 0; i < num_of_row; i++)
+                    {
+                       
+                        if (value1 == Convert.ToInt32(table.Rows[i].Cells[column].Value) || value2 <= Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                        {
+                            
+                            removes.Add(i);
+
+                        }
+
+
+                    }
+                    for (int i = 0; i < removes.Count; i++)
+                    {
+                        table.Rows.RemoveAt(removes[i]);
+                        for (int j = 0; j < removes.Count; j++)
+                        {
+                            if (i == j) continue;
+                            else { removes[j]--; }
+                        }
+                    }
+
+
+                }
+                else if(oper2=="<")
+                {
+                    for (int i = 0; i < num_of_row; i++)
+                    {
+
+                        if (value1 == Convert.ToInt32(table.Rows[i].Cells[column].Value) || value2 >= Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                        {
+
+                            removes.Add(i);
+
+                        }
+
+
+                    }
+                    for (int i = 0; i < removes.Count; i++)
+                    {
+                        table.Rows.RemoveAt(removes[i]);
+                        for (int j = 0; j < removes.Count; j++)
+                        {
+                            if (i == j) continue;
+                            else { removes[j]--; }
+                        }
+                    }
+
+
+
+
+                }
+                
+                
+               
+                }
+                else if(oper1=="=")
+                {
+
+                    if (oper2 == ">")
+                    {
+                        for (int i = 0; i < num_of_row; i++)
+                        {
+
+                            if (value1 != Convert.ToInt32(table.Rows[i].Cells[column].Value) || value2 <= Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                            {
+
+                                removes.Add(i);
+
+                            }
+
+
+                        }
+                        for (int i = 0; i < removes.Count; i++)
+                        {
+                            table.Rows.RemoveAt(removes[i]);
+                            for (int j = 0; j < removes.Count; j++)
+                            {
+                                if (i == j) continue;
+                                else { removes[j]--; }
+                            }
+                        }
+
+
+                    }
+                    else if (oper2 == "<")
+                    {
+
+                        for (int i = 0; i < num_of_row; i++)
+                        {
+
+                            if (value1 != Convert.ToInt32(table.Rows[i].Cells[column].Value) || value2 >= Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                            {
+
+                                removes.Add(i);
+
+                            }
+
+
+                        }
+                        for (int i = 0; i < removes.Count; i++)
+                        {
+                            table.Rows.RemoveAt(removes[i]);
+                            for (int j = 0; j < removes.Count; j++)
+                            {
+                                if (i == j) continue;
+                                else { removes[j]--; }
+                            }
+                        }
+
+                    }
+
+                }
+                else if(oper1==">")
+                {
+
+                    if (oper2 == "!=")
+                    {
+                        for (int i = 0; i < num_of_row; i++)
+                        {
+
+                            if (value1 <= Convert.ToInt32(table.Rows[i].Cells[column].Value) || value2 == Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                            {
+                               
+                                removes.Add(i);
+
+                            }
+
+
+                        }
+                        for (int i = 0; i < removes.Count; i++)
+                        {
+                            table.Rows.RemoveAt(removes[i]);
+                            for (int j = 0; j < removes.Count; j++)
+                            {
+                                if (i == j) continue;
+                                else { removes[j]--; }
+                            }
+                        }
+
+
+
+                    }
+                   
+                    
+                    else if (oper2 == "<")
+                    {
+
+                        for (int i = 0; i < num_of_row; i++)
+                        {
+
+                            if (value1 <= Convert.ToInt32(table.Rows[i].Cells[column].Value) || value2 >= Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                            {
+                                
+                                removes.Add(i);
+
+                            }
+
+
+                        }
+                        for (int i = 0; i < removes.Count; i++)
+                        {
+                            table.Rows.RemoveAt(removes[i]);
+                            for (int j = 0; j < removes.Count; j++)
+                            {
+                                if (i == j) continue;
+                                else { removes[j]--; }
+                            }
+                        }
+
+                    }
+                }
+
+                else if(oper1=="<")
+                {
+
+                    if (oper2 == "!=")
+                    {
+                        for (int i = 0; i < num_of_row; i++)
+                        {
+
+                            if (value1 >= Convert.ToInt32(table.Rows[i].Cells[column].Value) || value2 == Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                            {
+                                
+                                removes.Add(i);
+
+                            }
+
+
+                        }
+                        for (int i = 0; i < removes.Count; i++)
+                        {
+                            table.Rows.RemoveAt(removes[i]);
+                            for (int j = 0; j < removes.Count; j++)
+                            {
+                                if (i == j) continue;
+                                else { removes[j]--; }
+                            }
+                        }
+
+                    }
+                  
+                   
+                    else if (oper2 == ">")
+                    {
+
+                        for (int i = 0; i < num_of_row; i++)
+                        {
+
+                            if (value1 >= Convert.ToInt32(table.Rows[i].Cells[column].Value) || value2 <= Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                            {
+                                
+                                removes.Add(i);
+
+                            }
+
+
+                        }
+                        for (int i = 0; i < removes.Count; i++)
+                        {
+                            table.Rows.RemoveAt(removes[i]);
+                            for (int j = 0; j < removes.Count; j++)
+                            {
+                                if (i == j) continue;
+                                else { removes[j]--; }
+                            }
+                        }
+
+                    }
+
+                }
+            }
+               
+           
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warinig", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void or_Click(object sender, EventArgs e)
         {
 
+            oper2 = Operator.Text;
+            value2 = Convert.ToInt32(value.Text);
+
+            try
+            {
+
+                int column = table.CurrentCell.ColumnIndex;
+                int num_of_row = table.RowCount;
+                num_of_row--;
+                removes.Clear();
+                if (oper1 == "!=")
+                {
+                    
+                    if (oper2 == "!=")
+                    {
+
+                        for (int i = 0; i < num_of_row; i++)
+                        {
+
+                            if (value1== Convert.ToInt32(table.Rows[i].Cells[column].Value) || value2 == Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                            {
+
+                                removes.Add(i);
+
+                            }
+
+
+                        }
+                        for (int i = 0; i < removes.Count; i++)
+                        {
+                            table.Rows.RemoveAt(removes[i]);
+                            for (int j = 0; j < removes.Count; j++)
+                            {
+                                if (i == j) continue;
+                                else { removes[j]--; }
+                            }
+                        }
+
+                    }
+                    else if (oper2=="=")
+                    {
+
+                        for (int i = 0; i < num_of_row; i++)
+                        {
+
+                            if (value1 == Convert.ToInt32(table.Rows[i].Cells[column].Value) && value2 != Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                            {
+
+                                removes.Add(i);
+
+                            }
+
+
+                        }
+                        for (int i = 0; i < removes.Count; i++)
+                        {
+                            table.Rows.RemoveAt(removes[i]);
+                            for (int j = 0; j < removes.Count; j++)
+                            {
+                                if (i == j) continue;
+                                else { removes[j]--; }
+                            }
+                        }
+
+
+
+                    }
+                    else if (oper2 == ">")
+                    {
+                        for (int i = 0; i < num_of_row; i++)
+                        {
+
+                            if (value1 == Convert.ToInt32(table.Rows[i].Cells[column].Value) && value2 <= Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                            {
+
+                                removes.Add(i);
+
+                            }
+
+
+                        }
+                        for (int i = 0; i < removes.Count; i++)
+                        {
+                            table.Rows.RemoveAt(removes[i]);
+                            for (int j = 0; j < removes.Count; j++)
+                            {
+                                if (i == j) continue;
+                                else { removes[j]--; }
+                            }
+                        }
+
+
+                    }
+                    else if (oper2 == "<")
+                    {
+                        for (int i = 0; i < num_of_row; i++)
+                        {
+
+                            if (value1 == Convert.ToInt32(table.Rows[i].Cells[column].Value) && value2 >= Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                            {
+
+                                removes.Add(i);
+
+                            }
+
+
+                        }
+                        for (int i = 0; i < removes.Count; i++)
+                        {
+                            table.Rows.RemoveAt(removes[i]);
+                            for (int j = 0; j < removes.Count; j++)
+                            {
+                                if (i == j) continue;
+                                else { removes[j]--; }
+                            }
+                        }
+
+
+
+
+                    }
+
+
+
+                }
+                else if (oper1 == "=")
+                {
+                    if (oper2 == "!=")
+                    {
+                        for (int i = 0; i < num_of_row; i++)
+                        {
+
+                            if (value1!= Convert.ToInt32(table.Rows[i].Cells[column].Value) && value2 == Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                            {
+
+                                removes.Add(i);
+
+                            }
+
+
+                        }
+                        for (int i = 0; i < removes.Count; i++)
+                        {
+                            table.Rows.RemoveAt(removes[i]);
+                            for (int j = 0; j < removes.Count; j++)
+                            {
+                                if (i == j) continue;
+                                else { removes[j]--; }
+                            }
+                        }
+
+                    }
+                    else if (oper2=="=")
+                    {
+
+                        for (int i = 0; i < num_of_row; i++)
+                        {
+
+                            if (value1 != Convert.ToInt32(table.Rows[i].Cells[column].Value) || value2 != Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                            {
+
+                                removes.Add(i);
+
+                            }
+
+
+                        }
+                        for (int i = 0; i < removes.Count; i++)
+                        {
+                            table.Rows.RemoveAt(removes[i]);
+                            for (int j = 0; j < removes.Count; j++)
+                            {
+                                if (i == j) continue;
+                                else { removes[j]--; }
+                            }
+                        }
+
+
+
+                    }
+                    else if (oper2 == ">")
+                    {
+                        for (int i = 0; i < num_of_row; i++)
+                        {
+
+                            if (value1 != Convert.ToInt32(table.Rows[i].Cells[column].Value) && value2 <= Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                            {
+
+                                removes.Add(i);
+
+                            }
+
+
+                        }
+                        for (int i = 0; i < removes.Count; i++)
+                        {
+                            table.Rows.RemoveAt(removes[i]);
+                            for (int j = 0; j < removes.Count; j++)
+                            {
+                                if (i == j) continue;
+                                else { removes[j]--; }
+                            }
+                        }
+
+
+                    }
+                    else if (oper2 == "<")
+                    {
+                        for (int i = 0; i < num_of_row; i++)
+                        {
+
+                            if (value1 != Convert.ToInt32(table.Rows[i].Cells[column].Value) && value2 >= Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                            {
+
+                                removes.Add(i);
+
+                            }
+
+
+                        }
+                        for (int i = 0; i < removes.Count; i++)
+                        {
+                            table.Rows.RemoveAt(removes[i]);
+                            for (int j = 0; j < removes.Count; j++)
+                            {
+                                if (i == j) continue;
+                                else { removes[j]--; }
+                            }
+                        }
+
+
+
+
+                    }
+
+
+
+                }
+                else if (oper1 == ">")
+                {
+
+                    if (oper2 == "!=")
+                    {
+                        for (int i = 0; i < num_of_row; i++)
+                        {
+
+                            if (value1 <= Convert.ToInt32(table.Rows[i].Cells[column].Value) && value2 == Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                            {
+
+                                removes.Add(i);
+
+                            }
+
+
+                        }
+                        for (int i = 0; i < removes.Count; i++)
+                        {
+                            table.Rows.RemoveAt(removes[i]);
+                            for (int j = 0; j < removes.Count; j++)
+                            {
+                                if (i == j) continue;
+                                else { removes[j]--; }
+                            }
+                        }
+
+                    }
+                    else if(oper2=="=")
+                    {
+
+                        for (int i = 0; i < num_of_row; i++)
+                        {
+
+                            if (value1 <= Convert.ToInt32(table.Rows[i].Cells[column].Value) && value2 != Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                            {
+
+                                removes.Add(i);
+
+                            }
+
+
+                        }
+                        for (int i = 0; i < removes.Count; i++)
+                        {
+                            table.Rows.RemoveAt(removes[i]);
+                            for (int j = 0; j < removes.Count; j++)
+                            {
+                                if (i == j) continue;
+                                else { removes[j]--; }
+                            }
+                        }
+                    }
+                    else if (oper2 == "<")
+                    {
+                        for (int i = 0; i < num_of_row; i++)
+                        {
+
+                            if (value1 <= Convert.ToInt32(table.Rows[i].Cells[column].Value) &&value2 >= Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                            {
+
+                                removes.Add(i);
+
+                            }
+
+
+                        }
+                        for (int i = 0; i < removes.Count; i++)
+                        {
+                            table.Rows.RemoveAt(removes[i]);
+                            for (int j = 0; j < removes.Count; j++)
+                            {
+                                if (i == j) continue;
+                                else { removes[j]--; }
+                            }
+                        }
+
+
+                    }
+
+                    else if (oper2 == ">")
+                    {
+
+                        for (int i = 0; i < num_of_row; i++)
+                        {
+
+                            if (value1 <= Convert.ToInt32(table.Rows[i].Cells[column].Value) && value2 <= Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                            {
+
+                                removes.Add(i);
+
+                            }
+
+
+                        }
+                        for (int i = 0; i < removes.Count; i++)
+                        {
+                            table.Rows.RemoveAt(removes[i]);
+                            for (int j = 0; j < removes.Count; j++)
+                            {
+                                if (i == j) continue;
+                                else { removes[j]--; }
+                            }
+                        }
+
+                    }
+                }
+
+                else if (oper1 == "<")
+                {
+
+                    if (oper2 == "!=")
+                    {
+                        for (int i = 0; i < num_of_row; i++)
+                        {
+
+                            if (value1 >= Convert.ToInt32(table.Rows[i].Cells[column].Value) && value2 == Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                            {
+
+                                removes.Add(i);
+
+                            }
+
+
+                        }
+                        for (int i = 0; i < removes.Count; i++)
+                        {
+                            table.Rows.RemoveAt(removes[i]);
+                            for (int j = 0; j < removes.Count; j++)
+                            {
+                                if (i == j) continue;
+                                else { removes[j]--; }
+                            }
+                        }
+
+                    }
+                    else if (oper2 == "=")
+                    {
+
+                        for (int i = 0; i < num_of_row; i++)
+                        {
+
+                            if (value1 >= Convert.ToInt32(table.Rows[i].Cells[column].Value) && value2 != Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                            {
+
+                                removes.Add(i);
+
+                            }
+
+
+                        }
+                        for (int i = 0; i < removes.Count; i++)
+                        {
+                            table.Rows.RemoveAt(removes[i]);
+                            for (int j = 0; j < removes.Count; j++)
+                            {
+                                if (i == j) continue;
+                                else { removes[j]--; }
+                            }
+                        }
+                    }
+                    else if (oper2 == "<")
+                    {
+                        for (int i = 0; i < num_of_row; i++)
+                        {
+
+                            if (value1 >= Convert.ToInt32(table.Rows[i].Cells[column].Value) && value2 >= Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                            {
+
+                                removes.Add(i);
+
+                            }
+
+
+                        }
+                        for (int i = 0; i < removes.Count; i++)
+                        {
+                            table.Rows.RemoveAt(removes[i]);
+                            for (int j = 0; j < removes.Count; j++)
+                            {
+                                if (i == j) continue;
+                                else { removes[j]--; }
+                            }
+                        }
+
+
+                    }
+
+                    else if (oper2 == ">")
+                    {
+
+                        for (int i = 0; i < num_of_row; i++)
+                        {
+
+                            if (value1 >= Convert.ToInt32(table.Rows[i].Cells[column].Value) && value2 <= Convert.ToInt32(table.Rows[i].Cells[column].Value))
+                            {
+
+                                removes.Add(i);
+
+                            }
+
+
+                        }
+                        for (int i = 0; i < removes.Count; i++)
+                        {
+                            table.Rows.RemoveAt(removes[i]);
+                            for (int j = 0; j < removes.Count; j++)
+                            {
+                                if (i == j) continue;
+                                else { removes[j]--; }
+                            }
+                        }
+
+                    }
+                }
+            }
+
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warinig", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -1023,6 +1773,22 @@ namespace file
                 MessageBox.Show("If you get this error message, then you should take care of the following rules whilst you're writing queries: " + "\n" + "1-Leave exactly one space between words" + "\n"+"2-Make sure the spelling is correct.");
             }
         }
-
+        private float _ticks = 2.5f;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            _ticks -= 0.5f;
+            if (_ticks % 2 == 0 && _ticks % 1 == 0)
+                label7.Text = "Loading...";
+            else if (_ticks % 2 != 0 && _ticks % 1 == 0)
+                label7.Text = "Loading.";
+            else
+                label7.Text = "Loading..";
+            if (_ticks==0)
+            {
+                pictureBox3.Visible = false;
+                label7.Visible = false;
+                timer1.Stop();
+            }
+        }
     }
 }

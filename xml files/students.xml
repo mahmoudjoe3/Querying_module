@@ -1,46 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<table p1:name="" xmlns:p1="student">
+<student>
+  <id>1</id>
+  <name>nour</name>
+  <gender>Female</gender>
+  <department>General</department>
+  <projects>
+    <project1>mario</project1>
+    <project2>XO</project2>
+    <project3>task manager</project3>
+  </projects>
   <student>
-    <id>123</id>
-    <name>lol</name>
-    <gender>Male</gender>
-    <department>General</department>
-    <projects>
-      <project1>mario</project1>
-      <project2>XO</project2>
-    </projects>
-  </student>
-  <student>
-    <id>fef</id>
-    <name>ded</name>
+    <id>2</id>
+    <name>mamdoh</name>
     <gender>Male</gender>
     <department>Bioinformatic</department>
     <project>
-      <project1>mario</project1>
+      <project1>task manager</project1>
       <project2>connect 4</project2>
       <project3>chess</project3>
     </project>
   </student>
   <student>
-    <id>1</id>
-    <name>m</name>
+    <id>3</id>
+    <name>ahmed</name>
     <gender>Male</gender>
     <department>AI</department>
     <project>
       <project1>mario</project1>
-      <project2>XO</project2>
+      <project2>task manager</project2>
       <project3>connect 4</project3>
     </project>
   </student>
   <student>
-    <id>3</id>
+    <id>4</id>
     <name>mahmoud</name>
     <gender>Male</gender>
     <department>IT</department>
     <project>
-      <project1>mario</project1>
-      <project2>XO</project2>
-      <project3>connect 4</project3>
+      <project1>XO</project1>
+      <project2>connect 4</project2>
+      <project3>task manager</project3>
     </project>
   </student>
-</table>
+  <student>
+    <id>5</id>
+    <name>aml</name>
+    <gender>Female</gender>
+    <department>Software</department>
+    <project>
+      <project1>XO</project1>
+      <project2>task manager</project2>
+    </project>
+  </student>
+  <student>
+    <id>6</id>
+    <name>ma</name>
+    <gender>Male</gender>
+    <department>AI</department>
+    <project>
+      <project1>XO</project1>
+      <project2>connect 4</project2>
+    </project>
+  </student>
+</student>
